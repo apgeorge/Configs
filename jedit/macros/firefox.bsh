@@ -1,0 +1,8 @@
+// This is a recorded macro. First, check over the
+// commands to make sure this is what you intended. Then,
+// save this buffer, and the macro should appear in the
+// Macros menu.
+
+// runInSystemShell(view, "firefox -remote 'openURL(http://localhost:8000)' ");
+runInSystemShell(view, "wscript 'E:\\Program Files\\refresh.vbs'");
+

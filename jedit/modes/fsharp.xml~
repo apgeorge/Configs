@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE MODE SYSTEM "xmode.dtd">
+
+<MODE>
+	<PROPS>
+		<PROPERTY NAME="commentStart" VALUE="(*"/>
+		<PROPERTY NAME="commentEnd" VALUE="*)"/>
+		<PROPERTY NAME="lineComment" VALUE="//"/>
+	</PROPS>
+
+	<RULES ESCAPE="\" IGNORE_CASE="FALSE" HIGHLIGHT_DIGITS="TRUE">
+		<!-- comments -->
+		<SPAN TYPE="COMMENT1">
+			<BEGIN>(*</BEGIN>
+			<END>*)</END>
+		</SPAN>
+		<EOL_SPAN TYPE="COMMENT1">//</EOL_SPAN>
+
+		<!-- character literals -->
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE">
+			<BEGIN>#"</BEGIN>
+			<END>"</END>
+		</SPAN>
+
+		<!-- string literals -->
+		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="TRUE">
+			<BEGIN>"</BEGIN>
+			<END>"</END>
+		</SPAN>
+
+		<!-- built-in operators -->
+
+		<!-- infix precedence 7 -->
+		<SEQ TYPE="OPERATOR">/</SEQ>
+		<SEQ TYPE="OPERATOR">*</SEQ>
+
+		<!-- infix precedence 6 -->
+		<SEQ TYPE="OPERATOR">+</SEQ>
+		<SEQ TYPE="OPERATOR">-</SEQ>
+		<SEQ TYPE="OPERATOR">^</SEQ>
+
+		<!-- infix precedence 5 -->
+		<SEQ TYPE="OPERATOR">::</SEQ>
+		<SEQ TYPE="OPERATOR">@</SEQ>
+
+		<!-- infix precedence 4 -->
+		<SEQ TYPE="OPERATOR">=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;&gt;</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&lt;</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;=</SEQ>
+		<SEQ TYPE="OPERATOR">&gt;</SEQ>
+
+		<!-- infix precedence 3 -->
+		<SEQ TYPE="OPERATOR">:=</SEQ>
+
+		<KEYWORDS>
+
+		<!-- ;language core -->
+		<KEYWORD1>abstract</KEYWORD1>
+		<KEYWORD1>and</KEYWORD1>
+		<KEYWORD1>as</KEYWORD1>
+		<KEYWORD1>assert</KEYWORD1>
+		<KEYWORD1>begin</KEYWORD1>
+		<KEYWORD1>class</KEYWORD1>
+		<KEYWORD1>default</KEYWORD1>
+		<KEYWORD1>delegate</KEYWORD1>
+		<KEYWORD1>do</KEYWORD1>
+		<KEYWORD1>done</KEYWORD1>
+		<KEYWORD1>downcast</KEYWORD1>
+		<KEYWORD1>downto</KEYWORD1>
+		<KEYWORD1>else</KEYWORD1>
+		<KEYWORD1>end</KEYWORD1>
+		<KEYWORD1>enum</KEYWORD1>
+		<KEYWORD1>exception</KEYWORD1>
+		<KEYWORD1>extern</KEYWORD1>
+		<KEYWORD1>false</KEYWORD1>
+		<KEYWORD1>finally</KEYWORD1>
+		<KEYWORD1>for</KEYWORD1>
+		<KEYWORD1>fun</KEYWORD1>
+		<KEYWORD1>function</KEYWORD1>
+		<KEYWORD1>if</KEYWORD1>
+		<KEYWORD1>in</KEYWORD1>
+		<KEYWORD1>inherit</KEYWORD1>
+		<KEYWORD1>inline</KEYWORD1>
+		<KEYWORD1>interface</KEYWORD1>
+		<KEYWORD1>lazy</KEYWORD1>
+		<KEYWORD1>let</KEYWORD1>
+		<KEYWORD1>match</KEYWORD1>
+		<KEYWORD1>member</KEYWORD1>
+		<KEYWORD1>method</KEYWORD1>
+		<KEYWORD1>module</KEYWORD1>
+		<KEYWORD1>mutable</KEYWORD1>
+		<KEYWORD1>namespace</KEYWORD1>
+		<KEYWORD1>new</KEYWORD1>
+		<KEYWORD1>null</KEYWORD1>
+		<KEYWORD1>of</KEYWORD1>
+		<KEYWORD1>open</KEYWORD1>
+		<KEYWORD1>or</KEYWORD1>
+		<KEYWORD1>override</KEYWORD1>
+		<KEYWORD1>rec</KEYWORD1>
+		<KEYWORD1>sig</KEYWORD1>
+		<KEYWORD1>static</KEYWORD1>
+		<KEYWORD1>struct</KEYWORD1>
+		<KEYWORD1>then</KEYWORD1>
+		<KEYWORD1>to</KEYWORD1>
+		<KEYWORD1>true</KEYWORD1>
+		<KEYWORD1>try</KEYWORD1>
+		<KEYWORD1>type</KEYWORD1>
+		<KEYWORD1>upcast</KEYWORD1>
+		<KEYWORD1>val</KEYWORD1>
+		<KEYWORD1>void</KEYWORD1>
+		<KEYWORD1>when</KEYWORD1>
+		<KEYWORD1>while</KEYWORD1>
+		<KEYWORD1>with</KEYWORD1>
+
+		<!-- ;caml compatibility -->
+		<KEYWORD4>asr</KEYWORD4>
+		<KEYWORD4>async</KEYWORD4>
+		<KEYWORD4>atomic</KEYWORD4>
+		<KEYWORD4>break</KEYWORD4>
+		<KEYWORD4>checked</KEYWORD4>
+		<KEYWORD4>component</KEYWORD4>
+		<KEYWORD4>const</KEYWORD4>
+		<KEYWORD4>constraint</KEYWORD4>
+		<KEYWORD4>constructor</KEYWORD4>
+		<KEYWORD4>continue</KEYWORD4>
+		<KEYWORD4>decimal</KEYWORD4>
+		<KEYWORD4>eager</KEYWORD4>
+		<KEYWORD4>event</KEYWORD4>
+		<KEYWORD4>external</KEYWORD4>
+		<KEYWORD4>fixed</KEYWORD4>
+		<KEYWORD4>functor</KEYWORD4>
+		<KEYWORD4>include</KEYWORD4>
+		<KEYWORD4>land</KEYWORD4>
+		<KEYWORD4>lor</KEYWORD4>
+		<KEYWORD4>lsl</KEYWORD4>
+		<KEYWORD4>lsr</KEYWORD4>
+		<KEYWORD4>lxor</KEYWORD4>
+		<KEYWORD4>method</KEYWORD4>
+		<KEYWORD4>mixin</KEYWORD4>
+		<KEYWORD4>mod</KEYWORD4>
+		<KEYWORD4>object</KEYWORD4>
+		<KEYWORD4>process</KEYWORD4>
+		<KEYWORD4>property</KEYWORD4>
+		<KEYWORD4>protected</KEYWORD4>
+		<KEYWORD4>public</KEYWORD4>
+		<KEYWORD4>pure</KEYWORD4>
+		<KEYWORD4>readonly</KEYWORD4>
+		<KEYWORD4>return</KEYWORD4>
+		<KEYWORD4>sealed</KEYWORD4>
+		<KEYWORD4>virtual</KEYWORD4>
+		<KEYWORD4>volatile</KEYWORD4>
+		<KEYWORD4>{&lt;</KEYWORD4>
+		<KEYWORD4>&gt;}</KEYWORD4>
+
+		<!-- ;library functions -->
+		<KEYWORD2>abs</KEYWORD2>
+		<KEYWORD2>abs_float</KEYWORD2>
+		<KEYWORD2>acos</KEYWORD2>
+		<KEYWORD2>any_to_string</KEYWORD2>
+		<KEYWORD2>array</KEYWORD2>
+		<KEYWORD2>asin</KEYWORD2>
+		<KEYWORD2>atan</KEYWORD2>
+		<KEYWORD2>atan2</KEYWORD2>
+		<KEYWORD2>bool</KEYWORD2>
+		<KEYWORD2>bool_of_string</KEYWORD2>
+		<KEYWORD2>bprintf</KEYWORD2>
+		<KEYWORD2>broadcast</KEYWORD2>
+		<KEYWORD2>bscanf</KEYWORD2>
+		<KEYWORD2>catch</KEYWORD2>
+		<KEYWORD2>catch_break</KEYWORD2>
+		<KEYWORD2>ceil</KEYWORD2>
+		<KEYWORD2>channel</KEYWORD2>
+		<KEYWORD2>char</KEYWORD2>
+		<KEYWORD2>char_of_int</KEYWORD2>
+		<KEYWORD2>close_in</KEYWORD2>
+		<KEYWORD2>close_out</KEYWORD2>
+		<KEYWORD2>compare</KEYWORD2>
+		<KEYWORD2>concat</KEYWORD2>
+		<KEYWORD2>cos</KEYWORD2>
+		<KEYWORD2>cosh</KEYWORD2>
+		<KEYWORD2>create</KEYWORD2>
+		<KEYWORD2>decr</KEYWORD2>
+		<KEYWORD2>eprintf</KEYWORD2>
+		<KEYWORD2>exists</KEYWORD2>
+		<KEYWORD2>exists2</KEYWORD2>
+		<KEYWORD2>exit</KEYWORD2>
+		<KEYWORD2>exp</KEYWORD2>
+		<KEYWORD2>failwith</KEYWORD2>
+		<KEYWORD2>filter</KEYWORD2>
+		<KEYWORD2>find</KEYWORD2>
+		<KEYWORD2>find_all</KEYWORD2>
+		<KEYWORD2>float</KEYWORD2>
+		<KEYWORD2>float_of_int</KEYWORD2>
+		<KEYWORD2>float_of_string</KEYWORD2>
+		<KEYWORD2>floor</KEYWORD2>
+		<KEYWORD2>flush</KEYWORD2>
+		<KEYWORD2>fold</KEYWORD2>
+		<KEYWORD2>fold_left</KEYWORD2>
+		<KEYWORD2>fold_left2</KEYWORD2>
+		<KEYWORD2>fold_right</KEYWORD2>
+		<KEYWORD2>fold_right2</KEYWORD2>
+		<KEYWORD2>for_all</KEYWORD2>
+		<KEYWORD2>for_all2</KEYWORD2>
+		<KEYWORD2>force</KEYWORD2>
+		<KEYWORD2>fprintf</KEYWORD2>
+		<KEYWORD2>fscanf</KEYWORD2>
+		<KEYWORD2>fst</KEYWORD2>
+		<KEYWORD2>get</KEYWORD2>
+		<KEYWORD2>hd</KEYWORD2>
+		<KEYWORD2>in_channel_length</KEYWORD2>
+		<KEYWORD2>incr</KEYWORD2>
+		<KEYWORD2>init</KEYWORD2>
+		<KEYWORD2>input</KEYWORD2>
+		<KEYWORD2>input_binary_int</KEYWORD2>
+		<KEYWORD2>input_byte</KEYWORD2>
+		<KEYWORD2>input_char</KEYWORD2>
+		<KEYWORD2>input_line</KEYWORD2>
+		<KEYWORD2>input_value</KEYWORD2>
+		<KEYWORD2>int</KEYWORD2>
+		<KEYWORD2>int32</KEYWORD2>
+		<KEYWORD2>int64</KEYWORD2>
+		<KEYWORD2>int_of_char</KEYWORD2>
+		<KEYWORD2>int_of_float</KEYWORD2>
+		<KEYWORD2>int_of_string</KEYWORD2>
+		<KEYWORD2>iter</KEYWORD2>
+		<KEYWORD2>iter2</KEYWORD2>
+		<KEYWORD2>iteri</KEYWORD2>
+		<KEYWORD2>kprintf</KEYWORD2>
+		<KEYWORD2>kscanf</KEYWORD2>
+		<KEYWORD2>lazy_from_fun</KEYWORD2>
+		<KEYWORD2>lazy_from_val</KEYWORD2>
+		<KEYWORD2>lazy_is_val</KEYWORD2>
+		<KEYWORD2>lazy_tag</KEYWORD2>
+		<KEYWORD2>ldexp</KEYWORD2>
+		<KEYWORD2>length</KEYWORD2>
+		<KEYWORD2>lexeme</KEYWORD2>
+		<KEYWORD2>lexeme_char</KEYWORD2>
+		<KEYWORD2>lexeme_end</KEYWORD2>
+		<KEYWORD2>lexeme_end_p</KEYWORD2>
+		<KEYWORD2>lexeme_start</KEYWORD2>
+		<KEYWORD2>lexeme_start_p</KEYWORD2>
+		<KEYWORD2>list</KEYWORD2>
+		<KEYWORD2>log</KEYWORD2>
+		<KEYWORD2>log10</KEYWORD2>
+		<KEYWORD2>lowercase</KEYWORD2>
+		<KEYWORD2>magic</KEYWORD2>
+		<KEYWORD2>make</KEYWORD2>
+		<KEYWORD2>map</KEYWORD2>
+		<KEYWORD2>map2</KEYWORD2>
+		<KEYWORD2>mapi</KEYWORD2>
+		<KEYWORD2>max</KEYWORD2>
+		<KEYWORD2>max_float</KEYWORD2>
+		<KEYWORD2>max_int</KEYWORD2>
+		<KEYWORD2>mem</KEYWORD2>
+		<KEYWORD2>mem_assoc</KEYWORD2>
+		<KEYWORD2>mem_assq</KEYWORD2>
+		<KEYWORD2>memq</KEYWORD2>
+		<KEYWORD2>min</KEYWORD2>
+		<KEYWORD2>min_float</KEYWORD2>
+		<KEYWORD2>min_int</KEYWORD2>
+		<KEYWORD2>mod_float</KEYWORD2>
+		<KEYWORD2>modf</KEYWORD2>
+		<KEYWORD2>nan</KEYWORD2>
+		<KEYWORD2>nativeint</KEYWORD2>
+		<KEYWORD2>not</KEYWORD2>
+		<KEYWORD2>nth</KEYWORD2>
+		<KEYWORD2>obj</KEYWORD2>
+		<KEYWORD2>of_array</KEYWORD2>
+		<KEYWORD2>of_float</KEYWORD2>
+		<KEYWORD2>of_int</KEYWORD2>
+		<KEYWORD2>of_int32</KEYWORD2>
+		<KEYWORD2>of_list</KEYWORD2>
+		<KEYWORD2>of_nativeint</KEYWORD2>
+		<KEYWORD2>of_string</KEYWORD2>
+		<KEYWORD2>open_in</KEYWORD2>
+		<KEYWORD2>open_in_bin</KEYWORD2>
+		<KEYWORD2>open_in_gen</KEYWORD2>
+		<KEYWORD2>open_out</KEYWORD2>
+		<KEYWORD2>open_out_bin</KEYWORD2>
+		<KEYWORD2>open_out_gen</KEYWORD2>
+		<KEYWORD2>option</KEYWORD2>
+		<KEYWORD2>or</KEYWORD2>
+		<KEYWORD2>out_channel_length</KEYWORD2>
+		<KEYWORD2>output</KEYWORD2>
+		<KEYWORD2>output_binary_int</KEYWORD2>
+		<KEYWORD2>output_buffer</KEYWORD2>
+		<KEYWORD2>output_byte</KEYWORD2>
+		<KEYWORD2>output_char</KEYWORD2>
+		<KEYWORD2>output_string</KEYWORD2>
+		<KEYWORD2>output_value</KEYWORD2>
+		<KEYWORD2>parse</KEYWORD2>
+		<KEYWORD2>parse_argv</KEYWORD2>
+		<KEYWORD2>pred</KEYWORD2>
+		<KEYWORD2>prerr_char</KEYWORD2>
+		<KEYWORD2>prerr_endline</KEYWORD2>
+		<KEYWORD2>prerr_float</KEYWORD2>
+		<KEYWORD2>prerr_int</KEYWORD2>
+		<KEYWORD2>prerr_newline</KEYWORD2>
+		<KEYWORD2>prerr_string</KEYWORD2>
+		<KEYWORD2>print_char</KEYWORD2>
+		<KEYWORD2>print_endline</KEYWORD2>
+		<KEYWORD2>print_float</KEYWORD2>
+		<KEYWORD2>print_int</KEYWORD2>
+		<KEYWORD2>print_newline</KEYWORD2>
+		<KEYWORD2>print_string</KEYWORD2>
+		<KEYWORD2>printf</KEYWORD2>
+		<KEYWORD2>raise</KEYWORD2>
+		<KEYWORD2>read_float</KEYWORD2>
+		<KEYWORD2>read_int</KEYWORD2>
+		<KEYWORD2>read_line</KEYWORD2>
+		<KEYWORD2>ref</KEYWORD2>
+		<KEYWORD2>rev</KEYWORD2>
+		<KEYWORD2>rev_append</KEYWORD2>
+		<KEYWORD2>rev_map</KEYWORD2>
+		<KEYWORD2>rev_map2</KEYWORD2>
+		<KEYWORD2>scanf</KEYWORD2>
+		<KEYWORD2>seek_in</KEYWORD2>
+		<KEYWORD2>seek_out</KEYWORD2>
+		<KEYWORD2>set</KEYWORD2>
+		<KEYWORD2>set_binary_mode_in</KEYWORD2>
+		<KEYWORD2>set_binary_mode_out</KEYWORD2>
+		<KEYWORD2>shift_left</KEYWORD2>
+		<KEYWORD2>shift_right</KEYWORD2>
+		<KEYWORD2>shift_right_logical</KEYWORD2>
+		<KEYWORD2>sin</KEYWORD2>
+		<KEYWORD2>sinh</KEYWORD2>
+		<KEYWORD2>snd</KEYWORD2>
+		<KEYWORD2>sort</KEYWORD2>
+		<KEYWORD2>split</KEYWORD2>
+		<KEYWORD2>sprintf</KEYWORD2>
+		<KEYWORD2>sqrt</KEYWORD2>
+		<KEYWORD2>sscanf</KEYWORD2>
+		<KEYWORD2>stderr</KEYWORD2>
+		<KEYWORD2>stdin</KEYWORD2>
+		<KEYWORD2>stdout</KEYWORD2>
+		<KEYWORD2>string</KEYWORD2>
+		<KEYWORD2>string_of_bool</KEYWORD2>
+		<KEYWORD2>string_of_float</KEYWORD2>
+		<KEYWORD2>string_of_int</KEYWORD2>
+		<KEYWORD2>sub</KEYWORD2>
+		<KEYWORD2>subset</KEYWORD2>
+		<KEYWORD2>succ</KEYWORD2>
+		<KEYWORD2>tan</KEYWORD2>
+		<KEYWORD2>tanh</KEYWORD2>
+		<KEYWORD2>time</KEYWORD2>
+		<KEYWORD2>tl</KEYWORD2>
+		<KEYWORD2>to_buffer</KEYWORD2>
+		<KEYWORD2>to_channel</KEYWORD2>
+		<KEYWORD2>to_float</KEYWORD2>
+		<KEYWORD2>to_hex</KEYWORD2>
+		<KEYWORD2>to_int</KEYWORD2>
+		<KEYWORD2>to_int32</KEYWORD2>
+		<KEYWORD2>to_list</KEYWORD2>
+		<KEYWORD2>to_nativeint</KEYWORD2>
+		<KEYWORD2>to_string</KEYWORD2>
+		<KEYWORD2>union</KEYWORD2>
+		<KEYWORD2>unit</KEYWORD2>
+		<KEYWORD2>uppercase</KEYWORD2>
+		<KEYWORD2>usage</KEYWORD2>
+		<KEYWORD2>zero</KEYWORD2>
+
+		<!-- ;modules -->
+		<KEYWORD3>Arg </KEYWORD3>
+		<KEYWORD3>Array</KEYWORD3>
+		<KEYWORD3>Big_int</KEYWORD3>
+		<KEYWORD3>Buffer</KEYWORD3>
+		<KEYWORD3>Char</KEYWORD3>
+		<KEYWORD3>Filename</KEYWORD3>
+		<KEYWORD3>Hashtbl</KEYWORD3>
+		<KEYWORD3>Int32</KEYWORD3>
+		<KEYWORD3>Int64</KEYWORD3>
+		<KEYWORD3>Lazy</KEYWORD3>
+		<KEYWORD3>Lexing</KEYWORD3>
+		<KEYWORD3>List</KEYWORD3>
+		<KEYWORD3>Make</KEYWORD3>
+		<KEYWORD3>Map</KEYWORD3>
+		<KEYWORD3>Num</KEYWORD3>
+		<KEYWORD3>Obj</KEYWORD3>
+		<KEYWORD3>Parsing</KEYWORD3>
+		<KEYWORD3>Pervasives</KEYWORD3>
+		<KEYWORD3>Printexc</KEYWORD3>
+		<KEYWORD3>Printf</KEYWORD3>
+		<KEYWORD3>Scanning</KEYWORD3>
+		<KEYWORD3>Set</KEYWORD3>
+		<KEYWORD3>Seq</KEYWORD3>
+		<KEYWORD3>String</KEYWORD3>
+		<KEYWORD3>Sys </KEYWORD3>
+
+		<!-- meta-commands -->
+		<KEYWORD3>#r</KEYWORD3>
+		<KEYWORD3>#I</KEYWORD3>
+		<KEYWORD3>#use</KEYWORD3>
+		<KEYWORD3>#load</KEYWORD3>
+		<KEYWORD3>#time</KEYWORD3>
+		<KEYWORD3>#types</KEYWORD3>
+		<KEYWORD3>#quit</KEYWORD3>
+		<KEYWORD3>#light</KEYWORD3>
+		<KEYWORD3>#if</KEYWORD3>
+		<KEYWORD3>#else</KEYWORD3>
+		<KEYWORD3>#endif</KEYWORD3>
+
+		</KEYWORDS>
+		
+		
+	</RULES>
+</MODE>
+

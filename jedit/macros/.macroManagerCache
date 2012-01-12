@@ -1,0 +1,1388 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE PLUGINS SYSTEM "macros.dtd">
+<macros><timestamp>Sat Jan 08 19:21:25 IST 2011</timestamp>
+		<macro_set name="C and C++">
+		<description><![CDATA[]]></description>
+					<macro_set_entry>ToggleHeaderSource.bsh</macro_set_entry>
+						<macro_set_entry>ToggleHeaderSource.bsh 0.4</macro_set_entry>
+						<macro_set_entry>C++ fonction declaration to definition</macro_set_entry>
+						<macro_set_entry>Jump to beginning of current function</macro_set_entry>
+						<macro_set_entry>Jump to end of current function</macro_set_entry>
+						<macro_set_entry>Search asset exact</macro_set_entry>
+					</macro_set>
+			<macro_set name="Caret">
+		<description><![CDATA[Macros that move the caret or change the selection]]></description>
+					<macro_set_entry>Find First Unmatched Brace</macro_set_entry>
+						<macro_set_entry>WikiWord</macro_set_entry>
+					</macro_set>
+			<macro_set name="Execution">
+		<description><![CDATA[Macros for running scripts or external programs]]></description>
+					<macro_set_entry>Runs makepkg for the current opened PKGBUILD-file</macro_set_entry>
+						<macro_set_entry>Macro_Popup.bsh</macro_set_entry>
+						<macro_set_entry>Select the current buffer's file in windows explorer</macro_set_entry>
+					</macro_set>
+			<macro_set name="Files">
+		<description><![CDATA[Macros that deal with files or buffers]]></description>
+					<macro_set_entry>Toggle Read Only</macro_set_entry>
+						<macro_set_entry>listMarkers.bsh</macro_set_entry>
+						<macro_set_entry>switchLineSeparatorForAllBuffers.bsh</macro_set_entry>
+						<macro_set_entry>Open_This.bsh</macro_set_entry>
+						<macro_set_entry>Generate md5sum for source files in PKGBUILD</macro_set_entry>
+						<macro_set_entry>VOGen macro</macro_set_entry>
+						<macro_set_entry>ReadOnly_Buffer.bsh</macro_set_entry>
+						<macro_set_entry>Recent Files</macro_set_entry>
+						<macro_set_entry>Rename Current Buffer</macro_set_entry>
+						<macro_set_entry>LaTeX Menu Manager</macro_set_entry>
+						<macro_set_entry>Switch Project</macro_set_entry>
+						<macro_set_entry>Create Scratch Buffer</macro_set_entry>
+						<macro_set_entry>Close non project files</macro_set_entry>
+						<macro_set_entry>Open_Last_Closed_Buffer.bsh</macro_set_entry>
+						<macro_set_entry>Syncronize working directory of console and/or beanshell with current buffer</macro_set_entry>
+						<macro_set_entry>Undo Close Buffer</macro_set_entry>
+					</macro_set>
+			<macro_set name="Focus and Visibility">
+		<description><![CDATA[Macros which move the focus or change the visibility of certain GUI elements]]></description>
+					<macro_set_entry>Fullscreen macro</macro_set_entry>
+						<macro_set_entry>Auto Collapse Folds</macro_set_entry>
+						<macro_set_entry>Full Screen</macro_set_entry>
+						<macro_set_entry>Toggle Split</macro_set_entry>
+						<macro_set_entry>Splitpane Down</macro_set_entry>
+						<macro_set_entry>Splitpane Up</macro_set_entry>
+						<macro_set_entry>Toggle_Toolbar.bsh</macro_set_entry>
+					</macro_set>
+			<macro_set name="HTML and XML">
+		<description><![CDATA[]]></description>
+					<macro_set_entry>Validate HTML</macro_set_entry>
+						<macro_set_entry>Browse and link</macro_set_entry>
+						<macro_set_entry>Replace HTML/XML tags</macro_set_entry>
+						<macro_set_entry>Date Tag Buddy</macro_set_entry>
+					</macro_set>
+			<macro_set name="Information">
+		<description><![CDATA[Macros for finding and/or displaying information]]></description>
+					<macro_set_entry>Koders Search</macro_set_entry>
+						<macro_set_entry>Show number of selected lines and characters</macro_set_entry>
+						<macro_set_entry>Search word under cursor in man pages, filter through man2html</macro_set_entry>
+						<macro_set_entry>Display Shortcuts</macro_set_entry>
+						<macro_set_entry>Infoviewer Help Macro for PHP, XSLT, HTML, CSS</macro_set_entry>
+						<macro_set_entry>Country Code</macro_set_entry>
+						<macro_set_entry>View tree</macro_set_entry>
+						<macro_set_entry>Character_Info.bsh</macro_set_entry>
+					</macro_set>
+			<macro_set name="Java">
+		<description><![CDATA[Java-specific macros]]></description>
+					<macro_set_entry>Fold Java</macro_set_entry>
+						<macro_set_entry>A 'Go to definition' code browser macro.</macro_set_entry>
+						<macro_set_entry>getter/setter macro for Java/C++</macro_set_entry>
+						<macro_set_entry>JDocs Search</macro_set_entry>
+						<macro_set_entry>Load Classes To Instantiate</macro_set_entry>
+						<macro_set_entry>javaIndent.bsh</macro_set_entry>
+						<macro_set_entry>Javadoc Commenter</macro_set_entry>
+					</macro_set>
+			<macro_set name="Text">
+		<description><![CDATA[Macros that manipulate text]]></description>
+					<macro_set_entry>Insert simple Date</macro_set_entry>
+						<macro_set_entry>Remove Trailing WhiteSpaces</macro_set_entry>
+						<macro_set_entry>Toggle Line Comment</macro_set_entry>
+						<macro_set_entry>LineFilter</macro_set_entry>
+						<macro_set_entry>Block fill with text or numbers</macro_set_entry>
+						<macro_set_entry>Surround selection with string</macro_set_entry>
+						<macro_set_entry>Snippet chooser / paster</macro_set_entry>
+						<macro_set_entry>Remove_Comments.bsh</macro_set_entry>
+						<macro_set_entry>Hex2String</macro_set_entry>
+						<macro_set_entry>String2Hex</macro_set_entry>
+						<macro_set_entry>Move Line Down</macro_set_entry>
+						<macro_set_entry>Move Line Up</macro_set_entry>
+						<macro_set_entry>Delete Blank Lines</macro_set_entry>
+						<macro_set_entry>Insert Blank Lines</macro_set_entry>
+						<macro_set_entry>Text Squeezer</macro_set_entry>
+						<macro_set_entry>Select Between Quotes</macro_set_entry>
+						<macro_set_entry>IntelliWrap</macro_set_entry>
+						<macro_set_entry>Encrypt current buffer</macro_set_entry>
+						<macro_set_entry>Decrypt current buffer</macro_set_entry>
+						<macro_set_entry>Proper Case</macro_set_entry>
+						<macro_set_entry>Sort_Lines.bsh</macro_set_entry>
+						<macro_set_entry>Macro to sort lines like in Ultraedit updated</macro_set_entry>
+						<macro_set_entry>Just justify it !</macro_set_entry>
+						<macro_set_entry>Escape Properties</macro_set_entry>
+						<macro_set_entry>Duplicate Selection/Line macros</macro_set_entry>
+						<macro_set_entry>Sort Lines (editplus style sort)</macro_set_entry>
+						<macro_set_entry>UpdateIndex</macro_set_entry>
+					</macro_set>
+			<macro_set name="Version Control">
+		<description><![CDATA[]]></description>
+					<macro_set_entry>Textmate-like SVN popup menu</macro_set_entry>
+						<macro_set_entry>SVN update</macro_set_entry>
+						<macro_set_entry>SVN Add</macro_set_entry>
+						<macro_set_entry>SVN Info</macro_set_entry>
+						<macro_set_entry>SVN Log</macro_set_entry>
+						<macro_set_entry>SVN Revert</macro_set_entry>
+					</macro_set>
+	
+<!-- Macros -->
+	<macro name="Go to Ruby method v0.5">
+	<description><![CDATA[<p>Brings up a popup menu of Ruby methods that are in the current buffer grouped by class and ordered alphabeticaly. Selecting a class or method from the menu places the caret at that member's location in the file.</p>
+<p>New in v0.5:</p>
+<ul><li>Submenus show if there are multiple classes in file.</li><li>Show wait cursor while popup is being generated.<li>Fixed bug that occurred when "class" or "def" are preceded by non-white text.</li></ul>]]></description>
+	<author>Rob McKinnon</author>
+	<download version="0.5" size="4813" date="2004-03-28 08:03:17" hits="1369">http://community.jedit.org/?q=filestore/download/1066</download>
+	</macro>
+		<macro name="Rails - Extract Partial">
+	<description><![CDATA[Extract selected region from current buffer as a partial, ask for a name and create a new buffer with _(given_name).(current_extension), then insert a <%= render :partial => 'given_name' %>
+My shortcut: CS + p
+Example:
+you are working in a file index.html.erb, select some region and activate extract partial macro.
+it will ask you for a name to partial, you inform "list_item", then, a new buffer will be created
+with name "_list_item.html.erb" with the content of selection, than the selection will be replaced
+by the command "<%= render :partial => 'list_item' %>".
+enjoy.]]></description>
+	<author>Alexandre da Silva</author>
+	<download version="0.1" size="661" date="2008-09-15 01:09:42" hits="346">http://community.jedit.org/?q=filestore/download/4011</download>
+	</macro>
+		<macro name="Set of my jEdit Macros">
+	<description><![CDATA[A set of my jEdit macros.
+See description at: 
+http://taat.pl/jedit/
+
+Note: This is zipped file. Extract it before placing in settings directory.
+All macros as a separate files can be downloaded from http://taat.pl/en/jedit/]]></description>
+	<author>Tomek Pęszor</author>
+	<download version="1.0" size="24962" date="2008-07-07 08:07:24" hits="454">http://community.jedit.org/?q=filestore/download/3797</download>
+	</macro>
+		<macro name="A Macro to set folding mode on all open buffers.">
+	<description><![CDATA[This Macro prompts you for the folding mode you want "explicit, indent, none, java, etc..."
+
+It then sets the folding mode on all open buffers.]]></description>
+	<author>elberry</author>
+	<download version="0.0" size="572" date="2007-01-31 05:01:45" hits="556">http://community.jedit.org/?q=filestore/download/3425</download>
+	</macro>
+		<macro name="Auto auto completer">
+	<description><![CDATA[Automatically triggers auto complete for sidekick as you type]]></description>
+	<author>Lei Yang</author>
+	<download version="0.01" size="1629" date="2007-01-17 06:01:59" hits="779">http://community.jedit.org/?q=filestore/download/3414</download>
+	</macro>
+		<macro name="Unicode Escape">
+	<description><![CDATA[Converts all selected characters to Java-style unicode escapes (e.g. \u0000) unless the selection is a sequence of unicode escapes in which case they are converted back to characters.]]></description>
+	<author>Robert Fletcher</author>
+	<download version="1.0" size="2207" date="2003-12-16 10:12:09" hits="1312">http://community.jedit.org/?q=filestore/download/15</download>
+	</macro>
+		<macro name="Search Ruby documentation v0.2">
+	<description><![CDATA[<p>Allows user to search Ruby documentation using ri (Ruby interactive reference). I map this to: <tt>ctrl+r ctrl+i</tt></p>
+<ul><li>Brings up dialog for user to enter search term.</li>
+<li>Macro runs ri on term, and reports ri results in another dialog.</li>
+<li>Remembers last term searched, and places it in search entry field.</li>
+<li>If user has selected text, then that is placed in search entry field instead.</li></ul>
+<p>New in 0.2: lengthly results placed in scroll pane; handle error that occurs when results overflow native system's std out buffer.</p>
+
+<p>See other <a href="http://community.jedit.org/cgi-bin/TWiki/view/Main/MacrosForRuby">ideas for Ruby editing macros</a>.</p>
+]]></description>
+	<author>Rob McKinnon</author>
+	<download version="0.2" size="4801" date="2004-04-11 04:04:31" hits="1356">http://community.jedit.org/?q=filestore/download/1082</download>
+	</macro>
+		<macro name="Toggle Word Wrap">
+	<description><![CDATA[Beanshell macro to toggle word wrap for the current buffer in the order of none, hard, soft.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1363" date="2004-02-26 09:02:05" hits="1226">http://community.jedit.org/?q=filestore/download/1087</download>
+	</macro>
+		<macro name="Insert_File.bsh">
+	<description><![CDATA[Prompts user to select a file then replaces the current selection with the contents of the selected file.]]></description>
+	<author>Ollie Rutherfurd</author>
+	<download version="1.0" size="1108" date="2004-03-31 06:03:04" hits="1354">http://community.jedit.org/?q=filestore/download/1198</download>
+	</macro>
+		<macro name="List_Dirty_Buffers.bsh">
+	<description><![CDATA[Beanshell macro to provide a simple message box telling you whether there are any dirty buffers.  If all buffers are saved, a message will appear telling you there are no dirty buffers, otherwise a message will appear listing all the buffers that are dirty. This is useful if you like all available screen space to develop (no toolbars, no no docked plugins visable etc).]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1684" date="2004-04-14 08:04:14" hits="994">http://community.jedit.org/?q=filestore/download/1241</download>
+	</macro>
+		<macro name="minor updates for VOGen macro">
+	<description><![CDATA[<dl>
+<dt>Some minor changes to VOGen macro, changes include:</dt>
+<dt></dt>
+<dt>1. removed java edit mode checking, now a new buffer can perform VOGen before saving.</dt>
+<dt>2. added in check to verify the buffer contains matching brackets, if no matching bracket alert the user, instead of fialed to generate content and leave user in the lurch.</dt>
+<dt>3. added in version number in comments</dt>
+<dt></dt>
+<dt>Enjoy.</dt>
+<dt></dt>
+<dt>Note:</dt>
+<dt></dt>
+<dt>The macro support incremental VO generation. Means if you added in some new variables into existing generated java file, the macro will only generate get and set methods for newly added variables.</dt>
+<dt></dt>
+<dt>The macro retains the original format.</dt>
+</dl>]]></description>
+	<author>Jia Zhiming</author>
+	<download version="1.1" size="7107" date="2004-04-27 03:04:16" hits="954">http://community.jedit.org/?q=filestore/download/1282</download>
+	</macro>
+		<macro name="Clear Hypersearch Results Macro">
+	<description><![CDATA[Beanshell macro to clear all the hypersearch results from the hypersearch window.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1765" date="2004-07-16 10:07:12" hits="1683">http://community.jedit.org/?q=filestore/download/1483</download>
+	</macro>
+		<macro name="Find Next Selected">
+	<description><![CDATA[Got this idea from UltraEdit32, where I'd often skip the Find dialog by just selecting text and searching for its next occurrence. I never found another editor that provided this simple functionality, and now jEdit can do it with this macro!<br />
+<br />
+If there's no selection, it looks for the next occurrence of your last search (issues a "find-next" action). It's meant to be an improved "find-next", so you can remap your "find-next" shortcut to this macro if you want to.<br />
+<br />
+<br />
+New in version 1.01:
+<br />
+<br />
+- Special behavior when regular expressions enabled: if the current selection matches your regexp search string, then it issues a "find-next" action (so it won't disrupt ongoing regexp searches); otherwise, the selected text becomes the new regexp search string; if the new regexp search string is invalid, a regular search is performed (sounds more complicated than it actually is, the point is that now it handles regular expressions nicely :-) )]]></description>
+	<author>Dan Ferreira</author>
+	<download version="1.01" size="3089" date="2004-08-26 12:08:26" hits="2016">http://community.jedit.org/?q=filestore/download/1596</download>
+	</macro>
+		<macro name="Select_HyperSearch_Matches.bsh (modified)">
+	<description><![CDATA[selects all matches for the last HyperSearch in the current EditPane]]></description>
+	<author>Ollie Rutherfurd (modified by Saturn)</author>
+	<download version="1.01" size="3877" date="2004-08-11 06:08:39" hits="1182">http://community.jedit.org/?q=filestore/download/1557</download>
+	</macro>
+		<macro name="Ruby auto indent and insert end v0.6">
+	<description><![CDATA[<p>Designed to be executed each time the enter key is pressed. Auto indents and inserts 'end' after the following: if, for, while, until, unless, def, case, class, module, begin, loop do, x do |y|. Also aligns else and elsif. Designed to work with the auto-indenting defined in Ruby edit mode v0.3.</p>
+
+<p>Use in combination with the <a href="http://community.jedit.org/?q=node/view/1591">Ruby edit mode v0.3</a> to solve most of your Ruby indenting needs!</p>
+
+<p>TO INSTALL:<ol>
+<li>Place in directory: [user_home_dir]/.jedit/macros/Ruby</li>
+<li> Add the 'ENTER' key shortcut to this macro via:<ul>
+<li>Utilities -> Global Options -> Shortcuts -> Edit Shortcuts: Macros</li></ul>
+<li>Install <a href="http://community.jedit.org/?q=node/view/1591">Ruby edit mode v0.3</a>.</li></ol>]]></description>
+	<author>Robert McKinnon</author>
+	<download version="0.6" size="10083" date="2004-09-26 10:09:05" hits="1365">http://community.jedit.org/?q=filestore/download/1592</download>
+	</macro>
+		<macro name="Select RegExp HyperSearch Matches">
+	<description><![CDATA[A Beanshell macro script for the jEdit text editor - selects all matches for the last
+HyperSearch in the current EditPane. Contrary to the original macro that selects the whole line containing  (the start of) a match, this one <i>sets the selection exactly from the beginning of the match to its end thus possibly spanning across multiple lines</i>. Thanks to this it's well suitable for regular expression search.]]></description>
+	<author>Jakub Holy</author>
+	<download version="1.0" size="4930" date="2005-01-30 09:01:24" hits="1209">http://community.jedit.org/?q=filestore/download/1741</download>
+	</macro>
+		<macro name="SelectToMatchingTag.bsh">
+	<description><![CDATA[Selects all text between the current tag and the matching tag. <i>(This requires the XML plugin.)</i> <br>In fact code is slightly modified from the xml plugin action xml.XmlActions.matchTag. <br>So this could just be added to the xml plugin itself.]]></description>
+	<author>Saimon Moore</author>
+	<download version="0.2" size="1638" date="2005-01-20 04:01:04" hits="964">http://community.jedit.org/?q=filestore/download/2049</download>
+	</macro>
+		<macro name="Select lines matching regex">
+	<description><![CDATA[Selects lines matching a regular expression
+<ul>
+<li>remembers previous values</li>
+<li>suggested shortcut: CTRL-G (next to CTRL-F "Find")</li>
+</ul>]]></description>
+	<author>De Franciscis Dimitri</author>
+	<download version="1.0" size="2766" date="2005-08-12 09:08:10" hits="1055">http://community.jedit.org/?q=filestore/download/2350</download>
+	</macro>
+		<macro name="Write Active Plugins to Buffer">
+	<description><![CDATA[This macro creates a new buffer an writes a list of currently active plugins to it. The list is formatted in DokuWiki's table syntax. (formatting can easily be changed)]]></description>
+	<author>Jeroen Budts (TeRanEX)</author>
+	<download version="1.0" size="1614" date="2005-08-18 01:08:19" hits="806">http://community.jedit.org/?q=filestore/download/2361</download>
+	</macro>
+		<macro name="Screenshot.bsh">
+	<description><![CDATA[Take a screenshot of your desktop and save it as a PNG file.]]></description>
+	<author>Delvin Johnson</author>
+	<download version="1.0" size="2794" date="2005-09-09 08:09:19" hits="2759">http://community.jedit.org/?q=filestore/download/2383</download>
+	</macro>
+		<macro name="Get_Screen_Color.bsh">
+	<description><![CDATA[Get_Screen_Color.bsh:  A small text field that shows RGB or
+Hexadecimal color value for the current mouse coordinate. Usage:
+
+<ol>
+ <li>Press UP or DOWN to toggle RGB/Hexadecimal values</li>
+ <li>Press ENTER to copy the current value to the clipboard and stop.</li>
+ <li>Press ESCAPE to stop without copying.</li>
+</ol>
+ 
+Requires JRE 1.5 or later]]></description>
+	<author>Delvin Johnson</author>
+	<download version="1.0" size="2959" date="2005-09-09 08:09:02" hits="2729">http://community.jedit.org/?q=filestore/download/2384</download>
+	</macro>
+		<macro name="Geo coordinates converter macro">
+	<description><![CDATA[This macro converts geografical coordinates between degree.decimal and degree minutes seconds.decimal formats and vice versa. Created primary for X-plane flightsim related development. Maybe will be usefull for anyone.
+If you have any comments or suggestions contact me by email rolandas dot ananijevas at gmail dot com.]]></description>
+	<author>Rolandas A.</author>
+	<download version="1.0" size="1478" date="2005-09-30 04:09:42" hits="4397">http://community.jedit.org/?q=filestore/download/2419</download>
+	</macro>
+		<macro name="Shuffle Lines Macro">
+	<description><![CDATA[ a BeanShell macro script for shuffling the order of lines in a buffer.  If there are selections, the lines in the selections will be shuffled, otherwise the whole buffer will be shuffled.]]></description>
+	<author>DreamTangerine</author>
+	<download version="1.0" size="2434" date="2005-10-06 05:10:29" hits="684">http://community.jedit.org/?q=filestore/download/2432</download>
+	</macro>
+		<macro name="Automatically run Ant on the default target of the build file for frontmost buffer">
+	<description><![CDATA[It's kind of cumbersome to have to switch between ProjectViewer and AntFarm during development. So I created this simple  macro (3 lines) to allow me to press command-r to run the nearest build file for the frontmost buffer. You'll also need to create a keyboard shortcut yourself.
+<br/><br/>
+The script assumes that AntFarm and ProjectViewer are docked in the same pane. Whenever AntFarm runs, its panel becomes visible automatically, so the macro quickly switches it back to ProjectViewer (which I always leave open.)
+<br/><br/>
+If you have any questions or would like to enhance this, feel free to contact me at philip at philmaker dot com. All of this is documented in jEdit help:
+<br/><br/>
+- Console Plugin Help: 6. Macros and the Console plugin<br/>
+- AntFarm Plugin Help: 5. The Ant Shell<br/>
+- jEdit API Reference: org.gjt.sp.jedit.gui.DockableWindowManager<br/>]]></description>
+	<author>Philip Weaver</author>
+	<download version="1.0" size="204" date="2006-03-07 09:03:00" hits="702">http://community.jedit.org/?q=filestore/download/2673</download>
+	</macro>
+		<macro name="Make bookmarklet">
+	<description><![CDATA[Make_Bookmarklet.bsh -- removes the newlines and tabs in the current buffer, making the text appropriate for use as a javascript bookmarklet.]]></description>
+	<author>d delvin johnson</author>
+	<download version="1.0" size="944" date="2006-03-11 01:03:02" hits="548">http://community.jedit.org/?q=filestore/download/2683</download>
+	</macro>
+		<macro name="Select and iterate through string literals">
+	<description><![CDATA[<ul>
+<li>Calling this macro once selects text between the doublequotes around the caret, doublequotes exclusive.</li>
+<li>A second call selects also the doublequotes. </li>
+<li>By calling the macro multiple times, you iterate through the string literals in your file from left to right.</li>
+<li>It takes java/c++ escape sequences into consideration.</li>
+</ul>]]></description>
+	<author>Mehmet Soyturk "myavuzselim"</author>
+	<download version="0.1" size="1274" date="2006-04-14 08:04:54" hits="614">http://community.jedit.org/?q=filestore/download/2739</download>
+	</macro>
+		<macro name="All tasks in a project">
+	<description><![CDATA[I like the TaskList plugin, it shows the "TODO" messages in a file so it's easy to see them.  A feature I've always wanted for this plugin is to be able to show a list of all such messages in a ProjectViewer project, so I don't have to do a search.  This macro provides that ability.  This macro requires both TaskList and ProjectViewer to be installed.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="7907" date="2008-11-04 05:11:52" hits="403">http://community.jedit.org/?q=filestore/download/4042</download>
+	</macro>
+		<macro name="Compare Buffer Backups">
+	<description><![CDATA[Allows user to easily compare backup version of the current buffer, using the JDiff plugin. Requirements: JDK >= 1.5, jEdit >= 4.3pre15, jDiff >= 3.0.0.]]></description>
+	<author>Ollie Rutherfurd, John Gellene, Anthony Keeley</author>
+	<download version="1.0" size="9030" date="2009-08-06 08:08:43" hits="310">http://community.jedit.org/?q=filestore/download/4241</download>
+	</macro>
+		<macro name="javascript minify macro">
+	<description><![CDATA[<b>minifies javascript</b><br/>
+improved it to my needs<br/><br/>
+
+you can now specify an amount off lines which will be restored after compression
+to make comments persistent (so after deployment I can check which version of the script the server is running)
+this is especially usefull if you use a version control with 'on commit - keywords'
+]]></description>
+	<author>Patrik Plihal</author>
+	<download version="0.1" size="2707" date="2010-06-10 05:06:06" hits="76">http://community.jedit.org/?q=filestore/download/4476</download>
+	</macro>
+		<macro name="javascript packer macro">
+	<description><![CDATA[see javascript minify @ http://community.jedit.org/?q=node/view/4476 <br/>
+
+instead of YUI compress this one uses a port of http://dean.edwards.name/packer/]]></description>
+	<author>Patrik Plihal</author>
+	<download version="0.1" size="2632" date="2010-06-17 02:06:58" hits="84">http://community.jedit.org/?q=filestore/download/4482</download>
+	</macro>
+		<macro name="jEdit Mel Sender v0.1">
+	<description><![CDATA[A set of macros which send current buffer (file that is beeing worked on) in Maya where it is evaluated. Now you do not have to copy/paste text to script editor anymore since macros are taking care of it.
+
+You have three options:
+Send to Maya - sends whole buffer to Maya and evaluates it
+Send Selected to Maya - sends only selected text to Maya and evaluates it
+Source in Maya - sources current buffer in Maya (for large scripts)
+
+Macros were created on Windows XP (jEdit 4.3 pre 1 and Maya 7.0),  but I think they sould work on Linux and Mac also.
+
+Please see included instructions on how to set everything up.]]></description>
+	<author>nazz78</author>
+	<download version=" Macros to" size="12819" date="2005-09-09 11:09:29" hits="2486">http://community.jedit.org/?q=filestore/download/2388</download>
+	</macro>
+		<macro name="ToggleHeaderSource.bsh">
+	<description><![CDATA[Toggles current buffer between header and source. Both files should have same file name. Header extensions are .h*, sources are .c*<dl>
+
+Both files has to be currently open for magic to work. Otherwise nothing will happen.<dl>
+
+Serving suggestion: A+BACK_QUOTE<bl>
+
+Enjoy]]></description>
+	<author>Vladimir Avdonin</author>
+	<download version="1" size="623" date="2004-02-24 03:02:09" hits="857">http://community.jedit.org/?q=filestore/download/1073</download>
+	</macro>
+		<macro name="ToggleHeaderSource.bsh 0.4">
+	<description><![CDATA[  A jedit beanshell macro that toggles your current buffer
+    between  the header file (.h) and the source file (.cpp).
+
+    Enables you to switch the current text
+    buffer between c++ header and sourcecode
+    file. If the file does not already exist, it opens a buffer
+    of that name for you (!).
+
+    Version 0.4 also works with other filename extensions (.c, .cxx).
+]]></description>
+	<author>Alan Ezust</author>
+	<download version="0.4" size="1645" date="2005-11-09 03:11:10" hits="563">http://community.jedit.org/?q=filestore/download/2500</download>
+	</macro>
+		<macro name="C++ fonction declaration to definition">
+	<description><![CDATA[Macro that transform a C++ fonction declaration into a fonction definition. The class name is added according to filename of current buffer. To use, copy the fonction declaration into the .cpp file you want to define the fonction and apply the macro. The semi-colon at end of declaration is expected to be copied and is removed.
+
+Happy coding,
+
+Clément.]]></description>
+	<author>clement</author>
+	<download version="0.1" size="843" date="2006-03-17 01:03:31" hits="562">http://community.jedit.org/?q=filestore/download/2695</download>
+	</macro>
+		<macro name="Jump to beginning of current function">
+	<description><![CDATA[Using a SideKick tree where the functions in the current buffer are shown, jumps to the beginning of the function where the caret is located by finding the first '{' in the current asset.]]></description>
+	<author>Shlomy Reinstein</author>
+	<download version="0.1" size="508" date="2009-10-24 06:10:38" hits="175">http://community.jedit.org/?q=filestore/download/4301</download>
+	</macro>
+		<macro name="Jump to end of current function">
+	<description><![CDATA[Using a SideKick tree where the functions in the current buffer are shown, jumps to the end of the function where the caret is located by finding the last '}' in the current asset.]]></description>
+	<author>Shlomy Reinstein</author>
+	<download version="0.1" size="513" date="2009-10-24 06:10:47" hits="153">http://community.jedit.org/?q=filestore/download/4302</download>
+	</macro>
+		<macro name="Search asset exact">
+	<description><![CDATA[Searches the current SideKick asset (e.g. C function) for the selected word (exact match).]]></description>
+	<author>Shlomy Reinstein</author>
+	<download version="0.1" size="871" date="2009-10-24 02:10:42" hits="166">http://community.jedit.org/?q=filestore/download/4304</download>
+	</macro>
+		<macro name="Select_Word_or_Enclosed.bsh">
+	<description><![CDATA[This macro is ment for fast selecting text with one keyboard shortcut.
+It selects word when no selection is set.
+When selection is set (second run), it looks outside selection for pairs of characters like parenthesis ()[]{}<> or quotations "" '' or line separator and selects text beetween.
+Just assign shortcut to this macro (I use CTRL+ALT+UP ARROW) and you are able to select word no matter if caret is on the begginig, inside or at the end of word.
+Then hit this keyboard shortcut again to select text between characters described above.
+Hit once more to extend selection to select enclosing characters too, and once more to expand selection to next pairs.
+This macro is useful for selecting words, syntax keywords, strings, function values, HTML attribute values and many more.
+See it in action on <a href="http://youtube.com/watch?v=TxCuLjFrFxs">the screencast</a>.]]></description>
+	<author>Tomek Peszor</author>
+	<download version="1.0" size="5491" date="2008-07-02 12:07:52" hits="346">http://community.jedit.org/?q=filestore/download/3941</download>
+	</macro>
+		<macro name="Find First Unmatched Brace">
+	<description><![CDATA[This macro places the caret before the first brace that does not have a matching brace.]]></description>
+	<author>Sune Simonsen</author>
+	<download version="0.1" size="914" date="2007-01-14 08:01:46" hits="557">http://community.jedit.org/?q=filestore/download/3411</download>
+	</macro>
+		<macro name="WikiWord">
+	<description><![CDATA[Find the word the cursor is on and open a file by that name.<br>
+<br>
+Can find [Filename in brackets] or wordsSeparatedBySpaces or words-separated-by-tabs.<br>
+Can also jump to specific locations within the current file or other files by using text anchors like this: [myfile#this-anchor] or [myfile:this-anchor] or MyFile:This-anchor or MyFile#this-anchor . Anchors are searched for as [this-anchor] or if that isn't found just the anchor text anywhere in the file.<br>
+Configuration options can be specified in the text file to use filename patterns and search paths.<br>
+<br>
+I use this to set up a directory full of hyperlinked text. Attach a keyboard shortcut to the macro for quick jumping. I use control-TAB because it's next to control-` (previous file). So I can put the cursor inside a [WikiWord] and bounce back and forth to the file with control-TAB and control-`<br>
+<br>
+New features added in V1.7, 2009-10-19<br>
+<br>
+You can add the directives [path:xyz] or [rpath:xyz] anywhere in the document to set up search paths for documents. For example, the WikiLink [books-wanted.txt] will look in the current directory first, then in each directory in the path. rpath means 'recursive', which will search in that directory and all sub-directories under it.<br>
+You can also add the directives [filepattern:xyz] anywhere in the document to set up file name patterns, for example: [books-wanted] with [filepattern:$-notes.txt] will try to open 'books-wanted' and 'books-wanted-notes.txt' in the current directory and any directories in the path set up by [path:] and [rpath:]s. By default the given [WikiWord] itself ($) and WikiWord.txt ($.txt) are found first.<br>
+Note: I usually put all of my [path:][rpath:][filepattern:] directives at the end of my file.<br>
+<br>
+Personally, I keep all of my life's information in text files, and I use this to set up indexes, tables of contents, cross-references, etc. between my documents.<br>
+I use this as follows: I have a main-index.txt file I always keep open. It has a line for each project I am working on with a WikiLink like this: Human Genome Project: decoding human genome [genome] due 1/15/2008 -and at the bottom of the main-index.txt file I have: [rpath:D:\Docs\Projects][filepattern:project notes $.txt] so it will look in my entire projects tree and find 'project notes genome.txt' when I click on [genome] and hit ctrl-TAB.<br>
+
+<br>
+(This is my first jEdit macro. Enjoy.)<br>
+<br>]]></description>
+	<author>Peter Theobald</author>
+	<download version="1.7" size="7656" date="2009-10-20 12:10:48" hits="644">http://community.jedit.org/?q=filestore/download/2697</download>
+	</macro>
+		<macro name="Runs makepkg for the current opened PKGBUILD-file">
+	<description><![CDATA[Only for Arch Linux users.<br>
+<br>
+Runs makepkg command for the opened PKGBUILD-file. You need a Console plugin.]]></description>
+	<author>Dmitry Stropaloff</author>
+	<download version="0.1" size="1402" date="2007-02-11 05:02:35" hits="346">http://community.jedit.org/?q=filestore/download/3443</download>
+	</macro>
+		<macro name="Macro_Popup.bsh">
+	<description><![CDATA[A Macro popup menu]]></description>
+	<author>Delvin Johnson</author>
+	<download version="1.0" size="1481" date="2005-09-15 10:09:38" hits="4438">http://community.jedit.org/?q=filestore/download/2398</download>
+	</macro>
+		<macro name="Select the current buffer's file in windows explorer">
+	<description><![CDATA[Only for windows machines: Starts Windows explorer and selects the current buffer's file there.
+<p>
+Last update: bugfix (unwanted message was shown)]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.2" size="1941" date="2008-02-28 08:02:55" hits="706">http://community.jedit.org/?q=filestore/download/2629</download>
+	</macro>
+		<macro name="Toggle Read Only">
+	<description><![CDATA[]]></description>
+	<author>Ollie Rutherfurd</author>
+	<download version="1.0" size="2240" date="2004-02-18 02:02:45" hits="1183">http://community.jedit.org/?q=filestore/download/1049</download>
+	</macro>
+		<macro name="listMarkers.bsh">
+	<description><![CDATA[Displays a dialog similar to the hypersearch dialog
+which list all the markers set in the current buffer. Clicking on the entry
+takes you to the marker in the buffer.
+
+Please feel free to improve on the presentation ;)]]></description>
+	<author>Saimon Moore</author>
+	<download version="0.1" size="3282" date="2004-02-19 07:02:58" hits="1245">http://community.jedit.org/?q=filestore/download/1057</download>
+	</macro>
+		<macro name="switchLineSeparatorForAllBuffers.bsh">
+	<description><![CDATA[Displays a dialog which allows you to switch the line separators of either:
+  - All open buffers in current view
+  - All files (recursive) in a specified directory
+  - All files in a ProjectViewer project which you select
+ 
+Update: Added filter and now the macro will only close files which are not already open.
+
+Please feel free to update and improve on this...]]></description>
+	<author>Saimon Moore</author>
+	<download version="0.2" size="14089" date="2004-02-20 12:02:04" hits="1272">http://community.jedit.org/?q=filestore/download/1056</download>
+	</macro>
+		<macro name="Open_This.bsh">
+	<description><![CDATA[Opens selected path in new buffer. Select path to any file in current textarea and run this macro to open this file in new buffer.
+If nothing is selected, looks for file path inside quotes surrounding caret. Opens remote URLs as well.
+Based on Open_Selection.bsh macro, but no selection is needed.
+Most useful for included files, linked HTML pages, linked scripts or CSS files.]]></description>
+	<author>Tomek Peszor</author>
+	<download version="1.1" size="3327" date="2008-07-07 06:07:18" hits="403">http://community.jedit.org/?q=filestore/download/3951</download>
+	</macro>
+		<macro name="Generate md5sum for source files in PKGBUILD">
+	<description><![CDATA[Only for Arch Linux users.<br>
+<br>
+Automatically generates and inserts md5 sums of a source files into PKGBUILD file. You need a Console plugin.]]></description>
+	<author>Dmitry Stropaloff</author>
+	<download version="0.1" size="3688" date="2007-02-11 05:02:49" hits="477">http://community.jedit.org/?q=filestore/download/3444</download>
+	</macro>
+		<macro name="VOGen macro">
+	<description><![CDATA[Basicly it helps you to generate get/set methods from java class/instance variables. Unlike the "Make Get and Set Methods" macro, the operation is over the whole buffer, so there is no need to choose which portion to operate on. Quite easy to use. enjoy. :)]]></description>
+	<author>Jia Zhiming</author>
+	<download version="1.0" size="6895" date="2004-04-14 09:04:08" hits="885">http://community.jedit.org/?q=filestore/download/1242</download>
+	</macro>
+		<macro name="ReadOnly_Buffer.bsh">
+	<description><![CDATA[This macro will set current buffer to read-only mode without changing 
+file flag on hard disc so another user can access that file in
+read-write mode.
+Another call will unset buffer read-only flag.
+
+requires JDK 1.4, jEdit4.2
+
+This is 1.0 version, tested on Win2K, Jedit 4.2pre14 and jdk1.4.2_02.]]></description>
+	<author>codi</author>
+	<download version="1.0" size="1782" date="2008-05-31 01:05:32" hits="3164">http://community.jedit.org/?q=filestore/download/1378</download>
+	</macro>
+		<macro name="Recent Files">
+	<description><![CDATA[A macro to easily re-open a recent file. This is a modified version of Buffer_Switcher.bsh (written by Ollie Rutherfurd), to show recent files instead of open buffers.]]></description>
+	<author>Jeroen Budts (TeRanEX)</author>
+	<download version="1.0" size="4133" date="2005-08-21 12:08:11" hits="1010">http://community.jedit.org/?q=filestore/download/2366</download>
+	</macro>
+		<macro name="Rename Current Buffer">
+	<description><![CDATA[Renames the current buffer.]]></description>
+	<author>David Mlejnek</author>
+	<download version="0.1" size="1157" date="2004-09-13 04:09:38" hits="1291">http://community.jedit.org/?q=filestore/download/1669</download>
+	</macro>
+		<macro name="LaTeX Menu Manager">
+	<description><![CDATA[When in tex mode create a top-level menu for LaTeX Tools
+
+This macro simplifes the work of people using (La)TeX with jEdit because it makes 
+the menu of LaTeX Tools available in 1 click instead of 2 - 3.
+
+
+When a user switches into another buffer it's checked whether it is in the (la)tex mode
+and if so LaTeX Tool Plugin's menu is copied to the menu bar next to "Help" 
+(i.e. a top-most menu is created for it). When the buffer is left the menu is
+removed.
+
+
+The macro could be easily modified for another mode,plugin combination (change the
+fields PLUGIN_CLASS and MODES) and with a bit more work it could handle multiple
+pairs of modes and plugins.
+
+
+
+The macro shall be placed in jEdit startup directory (e.g. /home/me/.jedit/startup/; find it from jEdit: Utilities->Settings Directory->More->startup) to load it automaticaly. If you want to load it manually: 1. Open the macro and in beanshell execute 'eval( textArea.getText() );' or 'source("path/to/macro")' to make the class available 2. In beanshell again execute 'new ModeMenuManager( view );' which will create an instance listening for edit mode changes & setting the menu.
+<br><br>
+CHANGELOG:<br>
+1.1 - show the menu also for the 1st active buffer if it's TeX; so far you need to switch into a non-tex buffer and back<br>
+    - check that the plugin is available
+1.2 - work not only for tex but also for latex mode
+
+
+LIMITATIONS:
+ Only one view is supported so far. If there're more requests I'll work out multiple-view support but otherwise I'll leave it as it is.<br>
+ If you set edit mode of a buffer manually (in buffer options) the macro won't reflect it until you switch into another buffer and back<br>
+<br>
+LINKS:<br>
+ Donwload the LaTeX Tools plugin: http://plugins.jedit.org/plugins/?LaTeXTools
+ You should also try a pretty useful latex macro from http://jfmagni.free.fr/doc/help.html or http://community.jedit.org/?q=filestore/download/1830 (Files>Macros)
+<br>
+WARNING:<br>
+LaTeX Tools v. 0.5.1 only function with the mode 'tex'. If the buffer mode is 'latex' the plugin believes it's not a TeX file and so e.g. the Structure Browser doesn't work. i sumitted a bug for it.
+You may correct it yourself - see the plugin bug 1396913 (http://sourceforge.net/tracker/index.php?func=detail&aid=1396913&group_id=588&atid=565475).]]></description>
+	<author>Jakub Holy</author>
+	<download version="1.2" size="9961" date="2006-01-04 04:01:46" hits="1328">http://community.jedit.org/?q=filestore/download/2093</download>
+	</macro>
+		<macro name="Switch Project">
+	<description><![CDATA[A BeanShell macro script to easily switch between Projects (this macro requires the ProjectViewer plugin to work!). It is based on Buffer Switcher by Ollie Rutherfurth]]></description>
+	<author>Jeroen Budts (TeRanEX)</author>
+	<download version="1.0" size="4602" date="2005-07-27 05:07:12" hits="928">http://community.jedit.org/?q=filestore/download/2324</download>
+	</macro>
+		<macro name="Create Scratch Buffer">
+	<description><![CDATA[a BeanShell macro script to rapidly create temporary buffers in a specified directory, using a random name for the buffer. When you bind a shortcut to it (by example CS+n) this allows you to easily create a buffer to take notes and still save it without having to think about a name/location (just in case your computer crashes). By using the Delete_Buffer.bsh macro you can delete the buffer as easily as you created it.
+
+(i'm not entirely sure if "scratchbuffer" is a good name for this kind of buffer. Better names are welcome :))]]></description>
+	<author>TeRanEX</author>
+	<download version="1.0" size="2939" date="2005-08-02 10:08:28" hits="1027">http://community.jedit.org/?q=filestore/download/2338</download>
+	</macro>
+		<macro name="Close non project files">
+	<description><![CDATA[This macro closes opened buffers which are not members of current project. ]]></description>
+	<author>Jakub Roztocil</author>
+	<download version="1" size="1049" date="2006-08-16 08:08:09" hits="653">http://community.jedit.org/?q=filestore/download/2976</download>
+	</macro>
+		<macro name="Open_Last_Closed_Buffer.bsh">
+	<description><![CDATA[Opens last closed buffer.]]></description>
+	<author>Jakub Roztocil</author>
+	<download version="0.1" size="1299" date="2006-08-21 09:08:05" hits="604">http://community.jedit.org/?q=filestore/download/2985</download>
+	</macro>
+		<macro name="Syncronize working directory of console and/or beanshell with current buffer">
+	<description><![CDATA[This macro changes the working directory of console plugin and/or beanshell to the current buffer's parent directory. This is controlled by two properties, which have to be set manually.
+<p>
+The macro is intended for use with the action hooks pugin, bound to the events "BufferUpdate.LOADED" and "EditPaneUpdate.BUFFER_CHANGED". So the working directory of console is synchronized with current buffer (almost) every time.
+<p>
+Last Update: catch for exception on change to a buffer on non-disk file system.
+]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.3" size="4868" date="2010-05-17 05:05:38" hits="591">http://community.jedit.org/?q=filestore/download/3129</download>
+	</macro>
+		<macro name="Highlight plugin - fixed matching of end-of-line with '$' and beginning-of-line with '^'">
+	<description><![CDATA[]]></description>
+	<author>Shlomy Reinstein</author>
+	<download version="0.2" size="59160" date="2009-03-24 07:03:22" hits="232">http://community.jedit.org/?q=filestore/download/4154</download>
+	</macro>
+		<macro name="Undo Close Buffer">
+	<description><![CDATA[Reopens the recently closed buffer. Similar to the common browsers feature, that re-opens the recently closed tab. Recommended keyboard shortcut: Ctrl+Shift+T]]></description>
+	<author>David Mlejnek</author>
+	<download version="1.0" size="770" date="2010-08-23 08:08:31" hits="72">http://community.jedit.org/?q=filestore/download/4516</download>
+	</macro>
+		<macro name="Fullscreen macro">
+	<description><![CDATA[A simple macro that toggles jEdit window to/from fullscreen mode. Disables window manager decorations, and sets the VM fullscreen window.
+
+Works well on Linux. Windows testing shows that fullscreen window behavior is somewhat different.]]></description>
+	<author>k3rni</author>
+	<download version="0.1" size="250" date="2007-08-07 09:08:23" hits="380">http://community.jedit.org/?q=filestore/download/3627</download>
+	</macro>
+		<macro name="Auto Collapse Folds">
+	<description><![CDATA[Expands/Collapses explicit folds based on them being preceded by a + or - ( +{{{ or -{{{ ).  This lets you create a default expanded/collapsed state for each fold.]]></description>
+	<author>Brad Mace</author>
+	<download version="1.0" size="721" date="2003-12-16 11:12:35" hits="1468">http://community.jedit.org/?q=filestore/download/28</download>
+	</macro>
+		<macro name="Full Screen">
+	<description><![CDATA[Macro to close/reopen all docked windows, essentially a "Full Screen" toggle]]></description>
+	<author>Carmine Lucarelli</author>
+	<download version="1.0" size="2791" date="2003-12-30 02:12:18" hits="1567">http://community.jedit.org/?q=filestore/download/130</download>
+	</macro>
+		<macro name="Toggle Split">
+	<description><![CDATA[Switches the main split pane between two open views, splits the pane if it's not already splitted]]></description>
+	<author>Claudio Vicari</author>
+	<download version="0.5" size="2162" date="2004-03-19 12:03:21" hits="877">http://community.jedit.org/?q=filestore/download/1141</download>
+	</macro>
+		<macro name="Splitpane Down">
+	<description><![CDATA[Moves the main split pane in the active view towards the bottom, if vertical, or to the right, if horizontal. Useful if called via a keyboard shortcut, in order to easily hide/show file portions.]]></description>
+	<author>Claudio Vicari</author>
+	<download version="1.0" size="1687" date="2005-01-31 04:01:58" hits="659">http://community.jedit.org/?q=filestore/download/2096</download>
+	</macro>
+		<macro name="Splitpane Up">
+	<description><![CDATA[Moves the main split pane in the active view towards the top, if vertical, or the left, if horizontal.]]></description>
+	<author>Claudio Vicari</author>
+	<download version="1.0" size="1681" date="2005-01-31 04:01:26" hits="686">http://community.jedit.org/?q=filestore/download/2097</download>
+	</macro>
+		<macro name="Toggle_Toolbar.bsh">
+	<description><![CDATA[Toggle view of main toolbar. You can assign some shortcut for this macro and change view of main toolbar without opening Options dialog.]]></description>
+	<author>Oswald</author>
+	<download version="1" size="216" date="2006-05-20 09:05:58" hits="468">http://community.jedit.org/?q=filestore/download/2797</download>
+	</macro>
+		<macro name="Make Scriptlet">
+	<description><![CDATA[Macro for creating valid HTML bookmarklets.
+Compress JavaScript to one line of code, removing newline characters and other whitespaces in the current buffer or selection. 
+Makes the text appropriate for use as a JavaScript bookmarklet.
+Based on Make_Bookmarklet.bsh by delvinj, but my version produces valid HTML source.]]></description>
+	<author>Tomasz Peszor</author>
+	<download version="1.0" size="6499" date="2008-08-07 08:08:15" hits="374">http://community.jedit.org/?q=filestore/download/3982</download>
+	</macro>
+		<macro name="Validate HTML">
+	<description><![CDATA[A Beanshell macro to check html files with an external software using the Console plugin.
+You have to change the path to the checker in the macro for your needs.]]></description>
+	<author>Lars Naber</author>
+	<download version="1.00" size="1012" date="2004-02-05 07:02:05" hits="1335">http://community.jedit.org/?q=filestore/download/219</download>
+	</macro>
+		<macro name="Hypertext Link">
+	<description><![CDATA[This BeanShell macro creates an HTML anchor (&lt;A HREF=""&gt;...&lt;/A&gt; tag) for a URL selected in a buffer. Also gets the HTML page title from the web and puts it into the tag body. Requires the jTidy plugin.]]></description>
+	<author>Vojtech Broz (vojtech.broz@email.cz)</author>
+	<download version="0.1" size="1264" date="2004-07-27 10:07:15" hits="1182">http://community.jedit.org/?q=filestore/download/1502</download>
+	</macro>
+		<macro name="Browse and link">
+	<description><![CDATA[(If this macro doesn't work using the macro manager, download it directly from http://community.jedit.org/?q=filestore/browse/39). 
+
+This macro opens a file browser in order to insert links with relative path in an html file. It can be used for linking html, pdf, images, shortcut icons, style sheet files and Javascript files. For images, "width" an "height" in pixel are added. If html files are selected in the file browser, the anchors and id's of this file are listed in a dialog window. It is also possible to edit existing tags (e.g., img) and much more.
+
+]]></description>
+	<author>Pavel Štětina and Jean-François Magni</author>
+	<download version="20-Mar-05" size="15436" date="2005-03-20 11:03:12" hits="1571">http://community.jedit.org/?q=filestore/download/1815</download>
+	</macro>
+		<macro name="Replace HTML/XML tags">
+	<description><![CDATA[Replace an HTML/XML tag with another, preserving all the rest:
+- attributes (even with incorrect syntax)
+- whitespace
+- character data]]></description>
+	<author>De Franciscis Dimitri megadix@gmail.com</author>
+	<download version="1.0" size="4068" date="2005-09-08 01:09:29" hits="3255">http://community.jedit.org/?q=filestore/download/2382</download>
+	</macro>
+		<macro name="Date Tag Buddy">
+	<description><![CDATA[[READ THIS USING THE MACRO MANAGER]
+Updates certain date value tags in an HTML buffer (the current edit mode must be "html"):
+1. Updates the date value of a modification
+   date tag:
+   <address>Last modified: 01 Mar 2006</address>
+2. Updates the year in a copyright text:
+   <a href="mailto:me@c.com">&copy; Me 2006</a>
+Updates all "includes" in an HTML buffer. An include is defined as two HTML comments where the first one contains the path to a file that should be inserted between the comments:
+<!-- #include "includes/header.html" -->
+<!-- end include -->
+The path can be relative, as in the example, or absolute. Included files may contain date tags.
+
+The date tag and "include" updates can be automatically updated when the buffer is saved. Therefore install Ollie Rutherfurd's ActionHooks plugin (http://plugins.jedit.org/plugins/?ActionHooks) and set it up:
+1. Add the Date Tag Buddy macro to the
+   "BufferUpdate.SAVED" event list.
+2. Configure the ActionHooks plugin to start up
+   with JEdit.
+This ensures that date tags and "includes" are automatically updated whenever the HTML buffer is saved.
+
+A modification tag is identified by <address> and </address>. A copyright text is identified by &copy; and </a>. The macro assumes that the date value is located at the end of each tag. To change the default behavior of the macro you can modify the constants at its end.
+
+Checked for jEdit 4.3pre3 API.]]></description>
+	<author>Ralf Kintrup</author>
+	<download version="0.2" size="18984" date="2006-03-15 06:03:41" hits="882">http://community.jedit.org/?q=filestore/download/2674</download>
+	</macro>
+		<macro name="Koders Search">
+	<description><![CDATA[Searches on www.koders.com (a free on-line search engine for open source software and other web-downloadable code) for a term you can type in into the macros-gui or it searches for the word under the cursor and opens the result in a browser window.
+<br><br>
+On Windows is this the default one, on any others system the InfoViewer.]]></description>
+	<author>Thorsten Willert</author>
+	<download version="3.1" size="6501" date="2008-06-12 09:06:51" hits="477">http://community.jedit.org/?q=filestore/download/3923</download>
+	</macro>
+		<macro name="Show number of selected lines and characters">
+	<description><![CDATA[A very simple script that shows a status bar notification of how many lines and characters are currently selected, and how many selections there are (if more than one).
+
+Please note: this macro doesn't appear to work unless it's assigned to a shortcut key (i.e. triggering it via the Macros menu does nothing). ]]></description>
+	<author>Stickman</author>
+	<download version="1.0" size="1427" date="2007-02-05 10:02:41" hits="458">http://community.jedit.org/?q=filestore/download/3431</download>
+	</macro>
+		<macro name="Search word under cursor in man pages, filter through man2html">
+	<description><![CDATA[The macro grab the current selection or the word under the curser and runs a query against man2html cgi via infoviewer.
+man2html :
+- download from http://www.oac.uci.edu/indiv/ehood/man2html.html
+- it is easy to install
+]]></description>
+	<author>Stefan Kost</author>
+	<download version="0.1" size="1528" date="2003-12-29 09:12:02" hits="1054">http://community.jedit.org/?q=filestore/download/122</download>
+	</macro>
+		<macro name="Display Shortcuts">
+	<description><![CDATA[Displays the abbreviations registered for each of jEdit's editing modes. The macro provides a read-only view of the abbreviations contained in the Abbreviations option pane. Pressing a letter key will scroll the table to the first entry beginning with that letter. A further option is provided to write a selected mode's abbreviations or all abbreviations in a text buffer for printing as a reference. Notes in the source code listing point out some display options that are configured by modifying global variables.]]></description>
+	<author>John Gellene</author>
+	<download version="3.2.2" size="8622" date="2004-02-26 08:02:44" hits="1591">http://community.jedit.org/?q=filestore/download/1090</download>
+	</macro>
+		<macro name="Infoviewer Help Macro for PHP, XSLT, HTML, CSS">
+	<description><![CDATA[This simple macro shows contextual help for a keyword by loading an online web page into the infoviewer plugin (which is required).
+It currently supports 4 edit modes: PHP, XSLT, HTML, CSS. Each mode is associated to a web site offering documentation about that language.
+By assigning a shortcut to it (like ctrl-F1) you can reproduce the behaviour of many other editors.]]></description>
+	<author>Piero Orsoni</author>
+	<download version="1.0" size="1189" date="2005-08-26 04:08:19" hits="3037">http://community.jedit.org/?q=filestore/download/2376</download>
+	</macro>
+		<macro name="Country Code">
+	<description><![CDATA[Prompts for a two-letter country code and displays the corresponding country name.]]></description>
+	<author>Mohammed Badran</author>
+	<download version="1.0" size="14050" date="2004-04-18 03:04:20" hits="1202">http://community.jedit.org/?q=filestore/download/1259</download>
+	</macro>
+		<macro name="View tree">
+	<description><![CDATA[View_tree.bsh -- View jEdit's component heirarchy.]]></description>
+	<author>Delvin Johnson</author>
+	<download version="1.0" size="1836" date="2005-09-15 10:09:58" hits="2660">http://community.jedit.org/?q=filestore/download/2395</download>
+	</macro>
+		<macro name="Character_Info.bsh">
+	<description><![CDATA[Shows you the codepoint, hexvalue and classification of the characters selected in the textarea.]]></description>
+	<author>Delvin Johnson</author>
+	<download version="1.0" size="4641" date="2005-09-15 10:09:13" hits="4397">http://community.jedit.org/?q=filestore/download/2396</download>
+	</macro>
+		<macro name="Fold Java">
+	<description><![CDATA[Adds explicit folds around imports, static initializers, methods, constructors and inner classes in a Java buffer. The opening folds are appropriately labelled. methods of anonymous inner classes, etc. are also folded. The only known limitation is the macro doesn't pick up methods, constructors & inner classes that are package protected (i.e. have no public|protected|private declaration).
+
+This is basically a macro version of the LazyFolds plugin (the plugin can work for modes other than Java).]]></description>
+	<author>Robert Fletcher</author>
+	<download version="1.10" size="17753" date="2003-12-18 09:12:08" hits="1251">http://community.jedit.org/?q=filestore/download/18</download>
+	</macro>
+		<macro name="A 'Go to definition' code browser macro.">
+	<description><![CDATA[Highlight a class name, run the macro and it will automatically open the source for that class.
+
+Similar to "Go to definition" in Visual Studio. Very useful when browsing source code.  Could not imagine coding Java in JEdit without this.
+
+It can access many different source paths; your projects source, JDK source, etc. Just modify the 'searchPath' at the top of the macro to reflect where your JDK source code (or any source code) is located.
+
+Source code for the highlighted class will be opened if:
+    The cursor is on a class name in any part of the file AND
+        there is a import for the class OR
+        there is a wildcard import containing the class OR
+        the class is in the current package (current directory) OR
+        the class is in the java.lang source directory (searchPath must be set)
+        the class is in a different project than current project (searchPath must be set)
+    The cursor is on a line with an import statement
+    A fully qualified class is highlighted (not necessarily an import statement)
+ 
+  Limitations:
+     It cannot open a file if the package cannot be appended to any part of the current file's directory structure.
+     It only works with java files, other languages are not supported.
+     Will only find (scroll to) inner classes if it is in an import.
+]]></description>
+	<author>Steve Ewart</author>
+	<download version="1.3" size="11778" date="2007-02-03 11:02:09" hits="1819">http://community.jedit.org/?q=filestore/download/1322</download>
+	</macro>
+		<macro name="getter/setter macro for Java/C++">
+	<description><![CDATA[This is the modified version of the Make_Get_and_Set_Methods.bsh included with jEdit 4.1.
+It can handle assignment in declaration. (The one provided with some jEdit versions can't handle this)
+Can generate javadoc works with static and boolean fields.
+See usage notes in macro.
+0.91: Fixed static field recognition.]]></description>
+	<author>John Gellene, Francis Dobi</author>
+	<download version="0.91" size="13732" date="2004-10-24 11:10:50" hits="1508">http://community.jedit.org/?q=filestore/download/1379</download>
+	</macro>
+		<macro name="Javadoc Comment Stubs">
+	<description><![CDATA[This is a set of macros which you can use to generate Javadoc-style comments very easily. Just bind the 3 macros to some convenient keys, and you're all set!]]></description>
+	<author>Craig Slusher</author>
+	<download version="1.0" size="1571" date="2004-08-16 04:08:26" hits="1220">http://community.jedit.org/?q=filestore/download/1579</download>
+	</macro>
+		<macro name="JDocs Search">
+	<description><![CDATA[Beanshell macro to search JDocs (http://www.jdocs.com). It utilises the InfoViewer Plugin to display the jdocs page and can work a selection in the jEdit textarea or prompt you for a search item if no selection is made.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="2275" date="2004-09-15 02:09:58" hits="922">http://community.jedit.org/?q=filestore/download/1673</download>
+	</macro>
+		<macro name="Load Classes To Instantiate">
+	<description><![CDATA[Load compiled classes not on the class path whose instances you want to create. 
+This macro is useful for users of BeanShell - it defines a function that loads compiled classes and returns them in a hashtable.<br>
+<br>
+Load classes given by the user into a Hashtable mapping full class name to Class. Either all classes under a given directory are loaded (see loadAllClassesRecurs( packageBaseDirName )) or the user is presented with a browser to select the classes to load (ctrl+click for multiple selection!!!; see loadClassesWithBrowser(view)) and then is asked to say what's the directory part of the path and what's a fully qualified name of one of the selected classes.<br>
+<br>
+USAGE:<ol>
+<li> Open the macro in a buffer and evaluate the buffer in beanshell to make the functions available
+<li> theClassHashtable = loadClassFromFile();
+<li> myClass = theClassHashtable.get("mypackage.MyClass");
+<li> a) - no-argument constructor:<br>
+	myObj = myClass.newInstance();
+<li> b) - constructor taking an integer and string:<br>
+	myObj = myClass.getConstructor(new Class[]{Integer.TYPE, String.class})<br>
+		.newInstance( new Object[]{ 5, "xx" });
+</ol>
+<br>
+Notice: This macro is not intended to be run directly. Instead, you open it in a buffer, evaluate it and use its methods from beanshell.
+<br>
+See the source file for an example of a script to setup instances of classes I want to test, for help with file browser and additional info. Inside I refer to this script under the name Load_Classes2Instantiate while your is probalby named Load_Classes_To_Instantiate<br>
+<br>
+CHANGELOG:<br>
+Updated the example script to load & instantiate classes to test.]]></description>
+	<author>Jakub (Kuba) Holy</author>
+	<download version="1.1" size="18523" date="2005-02-06 05:02:24" hits="1082">http://community.jedit.org/?q=filestore/download/2123</download>
+	</macro>
+		<macro name="javaIndent.bsh">
+	<description><![CDATA[This macro will ident the selected lines in the current buffer. The identation of the first line will serve as a reference.
+
+Note that the code isn't changed, just some whitespaces added (or removed) at the beginning of each lines.
+
+Line 38 and 67 to 81 you can configure your preferred indentation sizes.]]></description>
+	<author>Pierre Grimaud</author>
+	<download version="1.0" size="17046" date="2006-10-21 01:10:25" hits="468">http://community.jedit.org/?q=filestore/download/3079</download>
+	</macro>
+		<macro name="Javadoc Commenter">
+	<description><![CDATA[This is a Java macro that writes Javadoc comments for you. It searches upwards from the cursor for a "public", "protected", or "private" keyword, requests input via a series of input boxes, and when you're finished inserts a new Javadoc-formatted comment in the correct position.]]></description>
+	<author>Damien Radtke</author>
+	<download version="1.0" size="5105" date="2009-11-09 04:11:31" hits="175">http://community.jedit.org/?q=filestore/download/4319</download>
+	</macro>
+		<macro name="Drag_Up.bsh">
+	<description><![CDATA[Moves current line or selected lines one line up.
+It is not needed to select lines from the beginning to the end.
+Just hold shift+up/down arrow to indicate which lines to move,
+and then, use a keyboard shortcut you have chosen for this macro.
+Keeps selection.
+Suggested shortcut: CS+up arrow.
+Use in conjunction with Drag_Down.bsh macro.]]></description>
+	<author>Tomek Pęszor</author>
+	<download version="1.1" size="3436" date="2008-07-07 07:07:36" hits="411">http://community.jedit.org/?q=filestore/download/3954</download>
+	</macro>
+		<macro name="Drag_Down.bsh">
+	<description><![CDATA[Moves current line or selected lines one line down.
+It is not needed to select lines from the beginning to the end.
+Just hold shift+up/down arrow to indicate which lines to move,
+and then, use a keyboard shortcut you have chosen for this macro.
+Keeps selection.
+Suggested shortcut: CS+down arrow.
+Use in conjunction with Drag_Up.bsh macro.]]></description>
+	<author>Tomek Peszor</author>
+	<download version="1.1" size="3139" date="2008-07-07 07:07:27" hits="394">http://community.jedit.org/?q=filestore/download/3953</download>
+	</macro>
+		<macro name="Remove_blank_lines.bsh">
+	<description><![CDATA[This simple macro removes blank lines from the current buffer or selection (lines with spaces or tabs also, not only \n\n).
+It just uses simple RegEx: ([\t\s]+)?\n+\n?]]></description>
+	<author>Tomek Pęszor</author>
+	<download version="1.0" size="1767" date="2008-07-04 11:07:50" hits="471">http://community.jedit.org/?q=filestore/download/3946</download>
+	</macro>
+		<macro name="Enclose pairs">
+	<description><![CDATA[Warning! this is a zip file. if you download from Macro Manager Plugin, go to your macro directory, rename the downloaded file (Enclose_pair.bsh) to Enclose_pair.zip and extract it, and delete the Encloe_pair.zip file <br />
+
+Set of simple macros to enclose char pairs such as: [] {} '' "" `` %% <> () <br /><br />
+
+<b>Features</b>
+<ul>
+  <li>Insert the pair when typing</li>
+  <li>Enclose the selection with pair just by typing it</li>
+</ul>
+
+Each one need to be configured with a shortcut corresponding with pair <br />
+
+unzip file into your $HOME/.jedit/macros directory]]></description>
+	<author>Alexandre da Silva</author>
+	<download version="0.1" size="4039" date="2008-06-12 03:06:37" hits="384">http://community.jedit.org/?q=filestore/download/3926</download>
+	</macro>
+		<macro name="Insert simple Date">
+	<description><![CDATA[Inserts current date in simple format "01.06.2008" at caret position.
+]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.0" size="524" date="2008-06-01 08:06:01" hits="412">http://community.jedit.org/?q=filestore/download/3905</download>
+	</macro>
+		<macro name="Remove Trailing WhiteSpaces">
+	<description><![CDATA[This macro removes trailing WhiteSpaces of selected lines (as the action with same
+name does). In contrast, if no selection is present, all lines are processed.
+]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.0" size="2132" date="2008-05-02 09:05:24" hits="472">http://community.jedit.org/?q=filestore/download/3869</download>
+	</macro>
+		<macro name="Toggle Line Comment">
+	<description><![CDATA[The title says it all.
+This highly useful macro has once been part of the default install of Jedit.
+Since the macro is missing in recent development versions of Jedit and I couldn't find
+it in the internet I decided to upload the file here, for the purpose of conservation.
+All credit to John Gellene. In recent versions of Jedit (4.3pre13 and later) the GnuRegexp-plugin 
+is required for this macro. Similar functionality is provided by the TextTools-plugin.
+
+]]></description>
+	<author>John Gellene</author>
+	<download version="1.5" size="3873" date="2008-03-17 08:03:39" hits="461">http://community.jedit.org/?q=filestore/download/3788</download>
+	</macro>
+		<macro name="LineFilter">
+	<description><![CDATA[The macro filters lines of a buffer due to a provided regular expression.<p>
+
+The filter actions are:   remove in current buffer or write to a new buffer.<br>
+The filter is applied on: matching or not matching lines<br>
+The filter works on:      the whole buffer or the selection (if it spans over mor than one line)<p>
+
+Based on the following macros: Retain_Or_Remove_Lines. by Jia Zhiming, Grep_Buffer.bsh and Reverse_Grep_Buffer.bsh  by Robert Fletcher
+]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.3" size="16642" date="2008-06-01 08:06:40" hits="644">http://community.jedit.org/?q=filestore/download/3783</download>
+	</macro>
+		<macro name="Block fill with text or numbers">
+	<description><![CDATA[Differences to the block-fill feature of TextTools Plugin:<p>
+
+1. No choice to overwrite or not the selection. Instead, the selected text is deleted and the new text is inserted with it's full length. <br>
+
+2. Improved performance on large selections because of:<br>
+   - Removed support for multiple selections<br>
+   - Removed support for tab handling
+]]></description>
+	<author>Robert Schwenn</author>
+	<download version="1.1" size="26768" date="2008-05-02 05:05:27" hits="470">http://community.jedit.org/?q=filestore/download/3780</download>
+	</macro>
+		<macro name="Surround selection with string">
+	<description><![CDATA[<p>This script is designed to help with inline markup of strings for reStructuredText, AsciiDoc, txt2tags, or other similar <a href="http://en.wikipedia.org/wiki/List_of_lightweight_markup_languages">Lightweight markup languages</a>. Of course, you can use it on *any* plain text where you want to convey extra meaning to the contents.</p>
+
+<p>Similarly to the XML plugin, it can surround multiple selections with the string requested by the user (by default, an asterisk- "*"). To be accepted as valid markup, though, the string must be at the start or end of the word, so the macro inserts the string at the closest word boundary without shrinking the selection. The selection is preserved, making it easier to apply another markup command afterwards.</p>
+
+<p>Unlike the Add_Prefix_and_Suffix.bsh macro, this one operates on selections, not selected lines.</p>]]></description>
+	<author></author>
+	<download version="1" size="1753" date="2007-10-29 11:10:39" hits="370">http://community.jedit.org/?q=filestore/download/3727</download>
+	</macro>
+		<macro name="Snippet chooser / paster">
+	<description><![CDATA[For pasting snippets of code (or any kind of text, really) into the current buffer.
+<br><br>
+You store all your snippets as separate text files in the c:\snippets directory (hard-code another location if you like).  When you run the macro it pops up a JList selection box where you can choose which snippet to paste.]]></description>
+	<author>Mike Cline</author>
+	<download version="1.0" size="2283" date="2007-04-27 07:04:46" hits="699">http://community.jedit.org/?q=filestore/download/3535</download>
+	</macro>
+		<macro name="Remove_Comments.bsh">
+	<description><![CDATA[This macros removes all comments from the buffer or from selection(s), if any. Doesn't work with javadoc style comments (nested markup isn't removed). ]]></description>
+	<author>Jakub Roztocil</author>
+	<download version="1.0" size="1412" date="2007-01-08 03:01:49" hits="507">http://community.jedit.org/?q=filestore/download/3399</download>
+	</macro>
+		<macro name="Hex2String">
+	<description><![CDATA[Converts the selected text from hexidecimal to ascii text.]]></description>
+	<author>Brad Mace</author>
+	<download version="1.0" size="406" date="2003-12-16 11:12:34" hits="1576">http://community.jedit.org/?q=filestore/download/24</download>
+	</macro>
+		<macro name="String2Hex">
+	<description><![CDATA[Converts the selected text to its hexidecimal equivalent]]></description>
+	<author>Brad Mace</author>
+	<download version="1.0" size="445" date="2003-12-16 11:12:54" hits="1429">http://community.jedit.org/?q=filestore/download/25</download>
+	</macro>
+		<macro name="Move Line Down">
+	<description><![CDATA[Beanshell macro to move a line down by one line.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1584" date="2004-01-08 11:01:59" hits="1382">http://community.jedit.org/?q=filestore/download/146</download>
+	</macro>
+		<macro name="Move Line Up">
+	<description><![CDATA[Beanshell macro to move a line up by one line.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1678" date="2004-01-08 11:01:00" hits="1347">http://community.jedit.org/?q=filestore/download/147</download>
+	</macro>
+		<macro name="Delete Blank Lines">
+	<description><![CDATA[Beanshell macro to delete all blank lines from a buffer.  In this case a blank line a taken as a line with no characters on it (not even whitespace characters).]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1904" date="2004-01-08 11:01:09" hits="2079">http://community.jedit.org/?q=filestore/download/148</download>
+	</macro>
+		<macro name="Insert Blank Lines">
+	<description><![CDATA[Beanshell macro to insert blank lines into a buffer.]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="1661" date="2004-01-08 11:01:44" hits="1065">http://community.jedit.org/?q=filestore/download/149</download>
+	</macro>
+		<macro name="Text Squeezer">
+	<description><![CDATA[This macro is an improvement of standard "Join Lines" function. 
+<ul>
+<li>
+When there is no selection in buffer, it joins current line and next NON-empty line, removing any whitespace content between them. 
+<li>
+If some text is selected, all empty lines within selected regions are removed.
+</ul>
+]]></description>
+	<author>tequilacat</author>
+	<download version="1.01" size="2950" date="2004-01-14 01:01:43" hits="1269">http://community.jedit.org/?q=filestore/download/163</download>
+	</macro>
+		<macro name="Select Between Quotes">
+	<description><![CDATA[Beanshell macro to simply select all the text between two quotes (").]]></description>
+	<author>Lee Turner</author>
+	<download version="1.0" size="2001" date="2004-03-11 03:03:14" hits="1379">http://community.jedit.org/?q=filestore/download/1131</download>
+	</macro>
+		<macro name="IntelliWrap">
+	<description><![CDATA[Given a selected text, tries to wrap the selected text based on prefix strings. Great when adding multi-line comment text that needs to be prefixed with special characters. I wrote it to emulate EMACS 'fill-paragraph' so that comments can be wrapped so as to not exceed a fixed limit. 
+
+<p>Can also be used for non-programatical tasks like prefixing replied mail text with '&gt;' etc.
+
+<p>Version 0.3 takes the selection properly into consideration
+<br>Version 0.2 incorporates the GPL header to the macro.
+ ]]></description>
+	<author>Shoban Jayaraj</author>
+	<download version="0.3" size="6015" date="2004-04-06 09:04:10" hits="1562">http://community.jedit.org/?q=filestore/download/1192</download>
+	</macro>
+		<macro name="Encrypt current buffer">
+	<description><![CDATA[Encrypts the current buffer content. The physical file content will not be modified until user saves the buffer. Uses PBE with MD5 and DES algorithm. Macro will prompt the user for a password which will be used to encrypt the buffer content.]]></description>
+	<author>David Mlejnek</author>
+	<download version="0.1" size="4641" date="2004-09-13 04:09:43" hits="1202">http://community.jedit.org/?q=filestore/download/1667</download>
+	</macro>
+		<macro name="Decrypt current buffer">
+	<description><![CDATA[Decrypts the current buffer content. The physical file content will not be modified until user saves the buffer. Buffer must be encrypted with Encrypt_Current.bsh. Uses PBE with MD5 and DES algorithm. Macro will prompt the user for a password which will be used to decrypt the buffer content.]]></description>
+	<author>David Mlejnek</author>
+	<download version="0.1" size="3820" date="2004-09-13 04:09:09" hits="1281">http://community.jedit.org/?q=filestore/download/1668</download>
+	</macro>
+		<macro name="Proper Case">
+	<description><![CDATA[A beanshell macro to convert selected text to Proper Case, in which the first letter of each word in the selection is Capitalized.
+]]></description>
+	<author>Jonathan Broome</author>
+	<download version="1.0" size="906" date="2004-10-14 02:10:45" hits="1168">http://community.jedit.org/?q=filestore/download/1757</download>
+	</macro>
+		<macro name="Sort_Lines.bsh">
+	<description><![CDATA[Sort_Lines.bsh
+
+a BeanShell macro for the jEdit text editor which is able to sort lines in ascending/descending order.
+
+Available options are<ul>
+<li>Remove duplicated lines</li>
+<li>Ignore case sorting</li></ul>]]></description>
+	<author>Pascal Dal Farra</author>
+	<download version="1.0" size="14829" date="2008-05-31 01:05:46" hits="3896">http://community.jedit.org/?q=filestore/download/1943</download>
+	</macro>
+		<macro name="Macro to sort lines like in Ultraedit updated">
+	<description><![CDATA[Hi,
+
+Here is an update of the sorting macros
+
+This macro is able to sort lines in ascending/descending order.
+
+Available options are<ul>
+<li>Remove duplicated lines</li>
+<li>Ignore case sorting</li>
+</ul>
+
+Enjoy <img src="misc/smileys/smile.png" title="Smiling" alt="Smiling" border="0">]]></description>
+	<author>Pascal Dal Farra</author>
+	<download version="1.1" size="14785" date="2008-05-31 01:05:54" hits="3620">http://community.jedit.org/?q=filestore/download/1952</download>
+	</macro>
+		<macro name="Upper/Lower/Invert/Capitalize Case Macros WHITHOUT unselecting text">
+	<description><![CDATA[4 separated macro that allows to change word case of selected text WHITHOUT unselecting text:<ul>
+<li> - Upper Case</li>
+<li> - Lower Case</li>
+<li> - Invert Case</li>
+<li> - Capitalize Case</li>
+</ul>
+
+Enjoy :-)
+]]></description>
+	<author>Pascal Dal Farra</author>
+	<download version="1.0" size="3283" date="2008-05-30 08:05:40" hits="3021">http://community.jedit.org/?q=filestore/download/1953</download>
+	</macro>
+		<macro name="Just justify it !">
+	<description><![CDATA[This macro will allow you to justify a list of word like The Bat (an email client) does. Also, when you are in a doc block (javadoc, phpdoc or jsdoc, etc) the macros will automaticly add the '*'. When nothing is selected, the macros will take text from the line where the caret is, until an empty line (only space, or only space with '*', or '*/' for docblock). Else it will take the text between the start line and end line of the selection. Note : you may have to customise (edit) the macro to get better result.
+
+A quick example [the comment is normally on one line, but it would broke up html presentation]
+
+<pre>
+/** 
+   If the selection is set, then we will use it to determine \
+   the selected text. Else we will use the {@link Textarea.ge\
+   tCaretLine()} method.
+ */
+</pre>
+
+Transformate into :
+
+<pre>
+/** 
+ * If  the  selection  is  set,  then  we will use it to determine the
+ * selected     text.     Else     we     will    use    the    {@link
+ * Textarea.getCaretLine()} method.
+ */
+</pre>
+
+]]></description>
+	<author>Baldurien</author>
+	<download version="1.0" size="9245" date="2005-10-13 11:10:58" hits="973">http://community.jedit.org/?q=filestore/download/2438</download>
+	</macro>
+		<macro name="Escape Properties">
+	<description><![CDATA[This macro converts the selected text into a sequence of escaped chars the same way the method store() of class java.util.Properties would do. It is very useful for writing language properties files from source files originally in other encodings. It escapes also : and \ and all that stuff problematic in a properties file.]]></description>
+	<author>Rainiero Rainoldi</author>
+	<download version="0.2" size="1169" date="2005-10-28 09:10:58" hits="651">http://community.jedit.org/?q=filestore/download/2487</download>
+	</macro>
+		<macro name="Duplicate Selection/Line macros">
+	<description><![CDATA[This is modified version of original Duplicate_Line.bsh that allow duplicate not only lines, but also selection, like in IntelliJ IDEA Ctlr+D (duplicate) feature
+Checked for jEdit 4.3.pre3]]></description>
+	<author>Sergey Kojin</author>
+	<download version="1.0" size="1407" date="2006-03-16 05:03:31" hits="812">http://community.jedit.org/?q=filestore/download/2692</download>
+	</macro>
+		<macro name="Sort Lines (editplus style sort)">
+	<description><![CDATA[Sort selected lines or whole buffer (when nothing is selected). <br>
+This is just similar to the sort function in Editplus 2. <br>
+Features: 
+<ul>
+<li><b>Order</b> - 
+Either ascending order or descending order.
+</li>
+<li><b>Starting column</b> - 
+Enter a column number from which the sorting operation begins. The text before this column number will be sorted when string after the column is the same. Enter an integer value great than or equals to 1.
+</li>
+<li><b>Case sensitive</b> - 
+The case-sensitive comparison option.
+</li>
+<li><b>Remove duplicates</b> - 
+Remove any duplicated line after the sorting option.
+</li>
+</ul>]]></description>
+	<author>Yuan Wang</author>
+	<download version="1.1" size="8681" date="2007-09-04 03:09:42" hits="1532">http://community.jedit.org/?q=filestore/download/2780</download>
+	</macro>
+		<macro name="Vim-Style Left and Right">
+	<description><![CDATA[These two macros are intended to replace jEdit's default "Go To Next Character" and "Go To Previous Character" actions. When used, pressing left or right will never move the cursor up or down. Normally, if left is pressed at the beginning of a line, the cursor moves up a line, and when pressing right at the end of a line, it goes down one. With these macros, in both cases, the cursor stays where it is.]]></description>
+	<author>Damien Radtke</author>
+	<download version="1.0" size="858" date="2009-11-09 06:11:50" hits="117">http://community.jedit.org/?q=filestore/download/4321</download>
+	</macro>
+		<macro name="UpdateIndex">
+	<description><![CDATA[Macro for keeping an "index" or "table of contents" at the top or bottom of an outline file. It assumes all non-indented lined are headers with indented content following each header. Also assumes there is a header titled "Index".<br>
+<br>
+UpdateIndex scans the current buffer, makes a list of all the headers, and replaces the section titled "Index" with this list.<br>
+<br>
+<pre>
+For example:
+
+Index
+    old items
+    no longer present
+
+shopping list
+    peaches
+    apples
+
+calls to make
+    call Larry
+    call Moe
+    call Curly
+
+After running UpdateIndex macro the file will be:
+
+Index
+    shopping list
+    calls to make
+
+shopping list
+    peaches
+    apples
+
+calls to make
+    call Larry
+    call Moe
+    call Curly
+</pre>
+
+It works really well in conjunction with my WikiWord.bsh macro which can turn each header into an active link.
+]]></description>
+	<author>Peter Theobald</author>
+	<download version="V1.0" size="1322" date="2010-11-17 02:11:30" hits="32">http://community.jedit.org/?q=filestore/download/4573</download>
+	</macro>
+		<macro name="Textmate-like SVN popup menu">
+	<description><![CDATA[Designed for use with SVNPlugin. After installing, assign a keystroke (preferably <i>Ctrl-Shift-A</i>, same as in Textmate) to it. When pressed, SVNPlugin's context menu with the most common operations (add, update, revert, commit, resolve etc.) pops up, in relative proximity to the cursor, which is probably the spot that your eyes are already focused on. The items have keyboard shortcuts (digits 1-5, same as in Textmate again) in order to speed up navigation. Thus, e.g. a commit is <i>CS-a, 4</i>.
+
+Known bugs:
+
+<ul>
+ <li>After one use, it steals the SVNPlugin menu from the textarea's context menu, which causes it to mess up, by still having the "Subversion" submenu item, but refusing to show the actual submenu. In order to avoid that, this macro removes that submenu from the textarea's context menu, making it available only on keystroke.</li>
+</ul>]]></description>
+	<author>k3rni</author>
+	<download version="0.9" size="1423" date="2008-04-22 09:04:50" hits="221">http://community.jedit.org/?q=filestore/download/3864</download>
+	</macro>
+		<macro name="SVN update">
+	<description><![CDATA[Macro to run SVN update.  The SVN command line client needs to be installed separately.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="221" date="2006-11-26 04:11:27" hits="418">http://community.jedit.org/?q=filestore/download/3279</download>
+	</macro>
+		<macro name="SVN Add">
+	<description><![CDATA[Console plugin is required.  SVN command line client is required.  Works on current buffer only.  I add it to the text area context menu (right click on the text area, then "Customize this menu").]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="216" date="2006-11-26 05:11:15" hits="475">http://community.jedit.org/?q=filestore/download/3280</download>
+	</macro>
+		<macro name="SVN Commit">
+	<description><![CDATA[Console plugin is required.  SVN command line client is required.  Works on current buffer only.  I add it to the text area context menu (right click on the text area, then "Customize this menu").]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="1908" date="2006-11-26 05:11:23" hits="522">http://community.jedit.org/?q=filestore/download/3281</download>
+	</macro>
+		<macro name="SVN Info">
+	<description><![CDATA[Console plugin is required.  SVN command line client is required.  Works on current buffer only.  I add it to the text area context menu (right click on the text area, then "Customize this menu").]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="218" date="2006-11-26 05:11:12" hits="443">http://community.jedit.org/?q=filestore/download/3282</download>
+	</macro>
+		<macro name="SVN Log">
+	<description><![CDATA[Console plugin is required.  SVN command line client is required.  Works on current buffer only.  I add it to the text area context menu (right click on the text area, then "Customize this menu").]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="216" date="2006-11-26 05:11:57" hits="436">http://community.jedit.org/?q=filestore/download/3283</download>
+	</macro>
+		<macro name="SVN Revert">
+	<description><![CDATA[Console plugin is required.  SVN command line client is required.  Works on current buffer only.  I add it to the text area context menu (right click on the text area, then "Customize this menu").]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="221" date="2006-11-26 05:11:53" hits="406">http://community.jedit.org/?q=filestore/download/3284</download>
+	</macro>
+		<macro name="PV SVN Add">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="901" date="2006-11-26 05:11:40" hits="510">http://community.jedit.org/?q=filestore/download/3285</download>
+	</macro>
+		<macro name="PV SVN Commit">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="2526" date="2006-11-26 05:11:34" hits="498">http://community.jedit.org/?q=filestore/download/3286</download>
+	</macro>
+		<macro name="PV SVN Info">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="903" date="2006-11-26 05:11:19" hits="477">http://community.jedit.org/?q=filestore/download/3287</download>
+	</macro>
+		<macro name="PV SVN Log">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="898" date="2006-11-26 05:11:07" hits="471">http://community.jedit.org/?q=filestore/download/3288</download>
+	</macro>
+		<macro name="PV SVN Update">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="913" date="2006-11-26 05:11:11" hits="500">http://community.jedit.org/?q=filestore/download/3289</download>
+	</macro>
+		<macro name="PV SVN Revert">
+	<description><![CDATA[These macros work on the currently selected node in the ProjectViewer tree. If the node is a directory, the commands are recursive, except for the info command.  I added them to the ProjectViewer context menu (Plugins, Plugin Options, ProjectViewer, Context Menu).  Both ProjectViewer and Console plugins are required, SVN command line client required.]]></description>
+	<author>Dale Anson</author>
+	<download version="1.0" size="1056" date="2006-11-26 05:11:06" hits="488">http://community.jedit.org/?q=filestore/download/3290</download>
+	</macro>
+		<macro name="Rails - Open Related File">
+	<description><![CDATA[JEdit macro for navigating between related files in a Rails project.
+
+The Rails directory needs to be copied into your <home_dir>/.jedit/macros directory. You will need to have the Ruby and 
+SideKick JEdit plugins as well as the "ruby" executable for your platform visible in the "path". This macro has been 
+tested on Windows and Linux (OS X users will have to settle for TextMate ;-) ).
+]]></description>
+	<author>Mario Aquino</author>
+	<download version="1.2" size="6302" date="2008-08-09 03:08:31" hits="341">http://community.jedit.org/?q=filestore/download/3984</download>
+	</macro>
+		<macro name="Ant Helper macros">
+	<description><![CDATA[4 simple macros that run the A,B,C,D targets in AntHelper but also force the AntFarm dockable window to stay closed. These are ideal for binding to shortcuts enabling you to work quickly without having a dockable you don't need to use popping up all the time.]]></description>
+	<author>Robert Fletcher</author>
+	<download version="1.0" size="1319" date="2003-12-17 01:12:25" hits="1169">http://community.jedit.org/?q=filestore/download/16</download>
+	</macro>
+		<macro name="Grep-like macros">
+	<description><![CDATA[2 macros that allow lines to be selected from a buffer based on whether they match (or do not match for the 2nd macro) a regular expression. The selected lines are placed in a new jEdit buffer. This is ideal for browsing large log files where you are looking for certain entries, etc.]]></description>
+	<author>Robert Fletcher</author>
+	<download version="1.0" size="1105" date="2003-12-17 01:12:43" hits="2021">http://community.jedit.org/?q=filestore/download/17</download>
+	</macro>
+		<macro name="Numeric Conversion Macros">
+	<description><![CDATA[6 macros that can convert a selection between different numeric formats; binary, decimal, hex and Roman numerals.]]></description>
+	<author>Robert Fletcher</author>
+	<download version="1.0" size="2229" date="2003-12-17 01:12:55" hits="1579">http://community.jedit.org/?q=filestore/download/20</download>
+	</macro>
+		<macro name="Smart Cut/Copy/Paste Macros">
+	<description><![CDATA[<b>Smart Copy/Cut/Paste Text macro for JEdit</b> (v1.0 rerelease 2004/04/06)<br>
+<br>
+A set of three simple bean shell macros that are designed to replace the built in copy/cut/paste functions in JEdit. They basically allow for treating the current line as selected if there is no selection. Detailed behaviour in a html file in the zip. I map ctrl-c/ctrl-x/ctrl-v and the toolbar buttons to these.<br>
+<br>
+The three macros are in a zip file so that all 3 travel together as they are only useful as a set.
+<br>
+<br><b>Tested</b> on JEdit 4.1pre2 4.1pre7<br>
+There is no change to code from previous release on JEdit community site<br> 
+]]></description>
+	<author>Robin Luiten</author>
+	<download version="1.0" size="4459" date="2004-04-06 05:04:19" hits="1432">http://community.jedit.org/?q=filestore/download/1218</download>
+	</macro>
+		<macro name="Vim like copy character above/ below macros">
+	<description><![CDATA[Two of the features in vim I find I use often is C-Y and C-E. What these do is copy either the character above the cursor (C-Y) or below it (C-E). This is a first take on that functionality in JEdit.
+Eg:
+If the line above is;
+           System.out.println
+then using Copy_Char_Above (I have it mapped to CS-Y) will copy one character from the line above to the current line. If I held CS and hit Y 6 times I'd get;
+System.
+I could then write err for eg, then hold down CS-Y to complete the line;
+System.err.println
+
+Helpful when you have repetitive lines that you aren't likely to ever use again so theres no point assigning an abbreviation to it.
+]]></description>
+	<author>Mark Woodward</author>
+	<download version="0.1" size="682" date="2004-11-16 12:11:33" hits="862">http://community.jedit.org/?q=filestore/download/1860</download>
+	</macro>
+		<macro name="Previous word actions with nice whitespace eating and selection movement actions">
+	<description><![CDATA[<p>
+PrevWord.bsh - like Go to Previous Word (Eat Whitespace) but don't eat whitespace in front of the word.
+</p><p>
+SelectPrevWord.bsh - like Select Previous Word (Eat Whitespace) but don't eat whitespace in front of the word.
+</p><p>
+BackspaceWord.bsh - like Delete Previous Word (Eat Whitespace) but don't eat whitespace in front of the word.
+</p>
+<p>
+Using these for the shortcuts C-left, CS-left, and C-backspace gives you word movement that always stops at the beginning of words, but does not stop at the end of words.
+(For the 'Next' variants use the standard actions with (Eat Whitespace))
+</p>
+<p>
+The Move_Selection_* macros allow you to ... well, move the current selection around.
+If you like you can bind them to complicated shortcuts and ruin your fingers. ;-)
+</p>
+<p>
+(I use AS- plus the standard movement keys... e.g. ASC-left to move past one word on the left)
+</p>
+<p>
+There is lots of ugly code duplication in these macros, but I guess it's ok as these should not be macros but builtin anyway. :-)
+</p>]]></description>
+	<author>Stefan Rank</author>
+	<download version="0.1" size="11863" date="2006-04-07 03:04:00" hits="547">http://community.jedit.org/?q=filestore/download/2731</download>
+	</macro>
+		<macro name="Goal column macros">
+	<description><![CDATA[<p>This macro bundle is inspired by <a
+href="http://www.gnu.org/software/emacs/">Emacs</a>’
+set-goal-column function.</p>
+
+<p>Installation instructions:</p>
+<ol>
+<li>Unzip the archive in your JEdit settings directory.</li>
+<li>Optionally, set shortcuts for Set Goal Column,
+Go to Goal Column of Next Line, Go to Goal Column of
+Prev Line, and Go to Goal Column of Current
+Line.</li>
+</ol>
+
+<p>Usage:</p>
+<ul>
+<li>Running Set Goal Column sets the goal column to the
+current column. (The default goal column is column 1.)</li>
+<li>Running Go to Goal Column of Next Line, Go to
+Goal Column of Prev Line, or Go to Goal Column of Current
+Line moves the caret to the goal column of the next, previous,
+or current line, respectively, regardless of the caret position in the
+current line.</li>
+</ul>]]></description>
+	<author>Andreas Nolda</author>
+	<download version="20091211" size="2170" date="2009-12-11 04:12:35" hits="149">http://community.jedit.org/?q=filestore/download/4342</download>
+	</macro>
+	</macros>

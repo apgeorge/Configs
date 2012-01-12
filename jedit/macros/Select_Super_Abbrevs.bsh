@@ -1,0 +1,378 @@
+/*
+ * Select_Super_Abbrevs.bsh - a BeanShell macro script for the
+ * jEdit text editor - Selects any super abbreviation from a list.
+ *
+ * Mostly copied from Display_Abbreviations.bsh by John Gellene
+ *
+ * requires JDK 1.4, jEdit4.2+
+ *
+ * Notes on use:
+ *
+ * This macro will display a sorted list of all defined super abbrevs
+ * in a dialog.  A combo box lists all editing modes for which abbreviations
+ * are currently defined, as well as the "global" abbreviation set.
+ * Any abbreviation can be selected to be expanded in the current buffer, from
+ * any mode in the combo box.
+ * The dialog will select the first abbreviation that begins with whatever characters
+ * precede the cursor when the macro is invoked, so typing va and invoking the macro
+ * will show all the validation macros in the ruby mode for instance. Clicking the 
+ * select button or hitting enter will cuase superAbbrevs to expand the currently
+ * selected abbreviation, replacing any matching characters preceding the cursor.
+ *
+ * Pressing a letter key will cause the table to scroll to the first row
+ * with a label beginning with the letter (or the immediately preceding row if
+ * no item begins with that letter).  The table is read-only; the dialog is
+ * dismissed by clicking "Cancel" or pressing Esc.
+ *
+ *
+ */
+
+import javax.swing.table.*;
+import superabbrevs.*;
+
+/*
+ * getActiveSets()
+ * This returns an array with the names of the abbreviation sets
+ * (beginning with "global").  If EXCLUDE_EMPTY_SETS is set to true, only sets
+ * with abbreviations are included.
+ */
+private Object[] getActiveSets()
+ {
+     Mode[] modes = jEdit.getModes();
+     Vector setVector = new Vector(modes.length + 1);
+     setVector.addElement("global");
+     for(int i = 0; i < modes.length; i++)
+     {
+	 String name = modes[i].getName();
+	 if(EXCLUDE_EMPTY_SETS)
+	 {
+	     Hashtable ht =  SuperAbbrevs.loadAbbrevs(name);
+	     if( ht == null || ht.isEmpty())
+		 continue;
+	 }
+	 setVector.addElement(name);
+     }
+     Object[] sets = new Object[setVector.size()];
+     setVector.copyInto(sets);
+     return sets;
+ }
+ 
+ /*
+ * makeTableDataForMode()
+ * This extracts the abbreviations from the named set.  If extraction is
+ * successful, the vector named by the first parameter will have its
+ * elements removed before the variable is set to the newly created vector.
+ */
+private Vector makeTableDataForMode(Vector v, String name)
+ {
+     if(name.equals(currentSet))
+	 return v;
+     Hashtable htable = null;
+     htable = SuperAbbrevs.loadAbbrevs(name);
+
+     if(htable != null)
+     {
+	 Enumeration abbrevEnum = htable.keys();
+	 Enumeration expandEnum = htable.elements();
+	 Vector newData = new Vector(20, 5);
+	 while(abbrevEnum.hasMoreElements())
+	 {
+	     Vector row = new Vector(2);
+	     row.addElement(abbrevEnum.nextElement());
+	     row.addElement(expandEnum.nextElement());
+	     newData.addElement(row);
+	 }
+	 MiscUtilities.quicksort(newData, new MiscUtilities.StringICaseCompare());
+	 currentSet = name;
+	 if( v != null)
+	     v.removeAllElements();
+	 v = newData;
+     }
+     return v;
+ }
+
+/*
+ * showSuperAbbrevs()
+ * This is the macro's principal method.
+ * It creates a table of the current modes abbreviations
+ * and selects the nearest match
+ */
+ void showSuperAbbrevs(String match)
+ {
+     combo = new JComboBox(abbrevSets);
+     Dimension dim = combo.getPreferredSize();
+     dim.width = Math.max(dim.width, 120);
+     combo.setPreferredSize(dim);
+     combo.setSelectedItem(STARTING_SET);
+     comboPanel = new JPanel(new FlowLayout());
+     comboPanel.add(new JLabel("Abbreviation set:"));
+     comboPanel.add(combo);
+
+     currentSet = null;
+     data = makeTableDataForMode(data, STARTING_SET);
+     if(data.size() == 0)
+     {
+	 STARTING_SET = "global";
+	 data = makeTableDataForMode(data, STARTING_SET);
+     }
+     Vector columnNames = new Vector(2);
+     columnNames.addElement(new String("Abbreviation"));
+     columnNames.addElement(new String("Expansion"));
+     table = new JTable();
+     table.setModel(new DefaultTableModel(data, columnNames));
+     table.setRowSelectionAllowed(true);
+     
+     /* 	The next line prevents the table from being edited.
+     * 	The normal approach in Java would be to subclass the TableModel
+     * 	associated with the JTable and define TableModel.isCellEditable()
+     * 	to return false.  However, BeanShell does not allow conventional
+     *  class creation, and the desired behavior cannot be achieved using
+     *  its scripted object feature.
+     */
+     table.setDefaultEditor(Object.class, null);
+
+     tablePane = new JScrollPane(table);
+     tablePane.setPreferredSize(new Dimension(450, 300));
+          
+     close = new JButton("Close");
+     select_it = new JButton("Select");
+     buttonPanel = new JPanel(new FlowLayout());
+     buttonPanel.add(select_it);
+     buttonPanel.add(close);
+     
+     close.addActionListener(this);
+     select_it.addActionListener(this);
+     combo.addActionListener(this);
+     void actionPerformed(e)
+     {
+	 Component source = e.getSource();
+	 if(source == close)
+	     dialog.hide();
+	 else if(source == select_it){
+	     doAbbrev(super.data, super.table.getSelectedRow(), match);
+	     dialog.hide();
+	 }else if(source == combo){
+	     super.data = makeTableDataForMode(super.data, (String)combo.getSelectedItem());
+	     if( data != null)
+	     {
+		 DefaultTableModel model = (DefaultTableModel)table.getModel();
+		 model.setDataVector(super.data, columnNames);
+		 model.fireTableDataChanged();
+		 setColumnWidths();
+		 setMatchingEntry(super.match);
+	     }
+	 }
+     }
+     
+     // workaround required by Swing bug; scheduled to be fixed in JDK 1.4
+     combo.getComponent(0).addKeyListener(this);
+     table.addKeyListener(this);
+     select_it.addKeyListener(this);
+     close.addKeyListener(this);
+     void keyPressed(e)
+     {
+	 if(combo.isPopupVisible()) return;
+	 if(e.getKeyCode() == KeyEvent.VK_ESCAPE){
+	     dialog.hide();
+	 }else if(e.getKeyCode() == KeyEvent.VK_ENTER){
+	     doAbbrev(super.data, super.table.getSelectedRow(), match);
+	     dialog.hide();
+	 }else if(e.getSource() != combo){
+	     char ch = e.getKeyChar();
+	     if(Character.isLetter(ch))
+	     {
+		 e.consume();
+		 row = findFirstItem(ch);
+	 	 table.setRowSelectionInterval(row,row);
+		 scrollVisible(row);
+	     }
+	 }
+     }
+     /*
+     * Having these members of KeyListener implemented as no-ops
+     * will speedup execution.  Otherwise BeanShell throws an
+     * exception that jEdit handles internally.
+     * Under BeanShell 1.2, implementation of these methods is
+     * required.
+     */
+     void keyReleased(e) {}
+     void keyTyped(e) {}
+     
+     /*
+     * findFirstItem()
+     * A simple linear search for the table entry that begins with the
+     * given letter.  It returns the first row with an entry beginning with
+     * the letter, or the immdediately preceding row if there is no match
+     * on the letter.
+     *
+     */
+     int findFirstItem(char ch)
+     {
+	 ch = Character.toUpperCase(ch);
+	 int row = 0;
+	 for(int i = 0; i < data.size(); ++i)
+	 {
+	     String name = ((Vector)data.elementAt(i)).elementAt(0);
+	     char ch_test = Character.toUpperCase(name.charAt(0));
+	     if( ch_test > ch) break;
+	     else
+	     {
+		 row = i;
+		 if( ch_test == ch) break;
+	     }
+	 }
+	 return row;
+     }
+           
+     // scroll the selected row to the center
+     void scrollVisible(int row){
+       Rectangle visibleRect = table.getVisibleRect();
+       int centerY = visibleRect.y + visibleRect.height/2;
+       Rectangle cellRectangle = table.getCellRect(row, 0, true);
+       if (centerY < cellRectangle.y) {
+	 //need to scroll UP
+	 cellRectangle.y = cellRectangle.y - visibleRect.y + centerY;
+       } else {
+	 //need to scroll DOWN
+	 cellRectangle.y = cellRectangle.y + visibleRect.y - centerY;
+       }
+       table.scrollRectToVisible(cellRectangle);	
+     }
+     
+     int findClosest(String match){
+	 for(int i = 0; i < data.size(); ++i)
+	 {
+	     String name = ((Vector)data.elementAt(i)).elementAt(0).toLowerCase();
+	     if(name.startsWith(match)){
+		 return i;
+	     }
+	 }
+	 return -1;
+     }
+
+     // find an entry that starts with match and select it
+     // then try to put that entry at the top of the list
+     void setMatchingEntry(match){
+       // set to first matching value
+       if(table.getRowCount() != 0){
+	 // if the match is empty then select first otherwise find closest match
+	 table.setRowSelectionInterval(0,0);
+	 if(!match.equals("")){
+	   c= findClosest(match.toLowerCase());
+	   if(c < 0) c= 0;
+	   table.setRowSelectionInterval(c, c);
+	   scrollVisible(c);
+	 }
+       }
+       table.requestFocusInWindow();
+     }
+ 
+     void setColumnWidths(){
+       TableColumnModel columnModel = table.getColumnModel();
+       col= 0;
+       TableColumn tableColumn = columnModel.getColumn(col);
+       table.getTableHeader().setResizingColumn(tableColumn);
+       tableColumn.setWidth(100);
+     }
+     
+     title = "Super Abbreviation list";
+     dialog = new JDialog(view, title, false);
+     c = dialog.getContentPane();
+     c.add(tablePane, "Center");
+     c.add(comboPanel, "North");
+     c.add(buttonPanel, "South");
+     dialog.getRootPane().setDefaultButton(close);
+     dialog.pack();
+     dialog.setLocationRelativeTo(view);
+     dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+     dialog.show();
+     
+     setColumnWidths();
+     setMatchingEntry(match);	    
+ }
+
+private void doAbbrev(Vector v, int sel, String match)
+{
+  //Log.log(Log.DEBUG, BeanShell.class, "Selection= " + sel);
+  if(sel >= 0){
+    Vector row = (Vector)v.elementAt(sel);
+    abbrevName = (String)row.elementAt(0);
+    template= row.elementAt(1);
+    
+    if(!match.equals("")){   // Remove the abbreviation first 
+	p = textArea.getCaretPosition();
+	s = p - match.length();
+	buffer.remove(s, match.length());
+    }
+    SuperAbbrevs.expandAbbrev(view, template, SuperAbbrevs.loadVariables());    
+  }
+}
+
+/**
+* Get the abbreviation before the caret
+* Taken from SuperAbbrevs source code.
+*/
+private String getAbbrev(){
+    // in the following i will refere to the line where the caret resides 
+    // as the current line.
+    
+    // the line number of the current line 
+    int line = textArea.getCaretLine();
+    // the start position of the current line in the full text  
+    int lineStart = buffer.getLineStartOffset(line);
+    // the offset of the caret in the full text 
+    int caretPos = textArea.getCaretPosition();
+    // the offset of the caret in the current line 
+    int caretPosition = caretPos - lineStart;
+    
+    // the text on the current line
+    String lineText = buffer.getLineText(line);
+    
+    int i=caretPosition-1;
+    while(0<=i && Character.isJavaIdentifierPart(lineText.charAt(i))){
+	i--;
+    }
+    return lineText.substring(i+1,caretPosition).toLowerCase();
+}
+
+/*
+ * main routine, including definition of global variables
+ */
+Mode m = buffer.getMode();
+if (m != null)
+    STARTING_SET= m.getName();
+else
+    STARTING_SET = "global";
+
+EXCLUDE_EMPTY_SETS = true;
+abbrevSets = getActiveSets();
+currentSet = null;
+Vector data = new Vector(20, 5);
+
+showSuperAbbrevs(getAbbrev());
+
+/*
+	Macro index data (in DocBook format)
+
+<listitem>
+    <para><filename>Select_Super_Abbrevs.bsh</filename></para>
+    <abstract><para>
+        Displays and allows selection of any abbreviation registered for 
+	each of SuperAbbrev's editing modes.
+    </para></abstract>
+    <para>
+        The macro provides a read-only view of the abbreviations
+        contained in the <quote>SuperAbbrevs</quote> option pane.  Pressing
+        a letter key will scroll the table to the first entry beginning with
+        that letter. The first abbreviation selected will be based on a match
+	of whatever precedes the cursor when the macro is invoked.
+	Hitting enter or click select will ask SupperAbbrevs to expand the
+	selected abbreviation in the current buffer at the current cursor
+	position.
+    </para>
+</listitem>
+
+*/
+
+// end Select_Super_Abbrevs.bsh
+

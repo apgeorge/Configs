@@ -1,0 +1,162 @@
+
+/**
+ * A macro to show all of the tasks that the TaskList plugin would show
+ * if the TaskList plugin had any concept of ProjectViewer.  This macro
+ * gets the list of files from ProjectViewer for the current project,
+ * passes each of them to TaskList to find the tasks for each file, and
+ * combines them all into a single tree display.  This puts all the TODOs
+ * for the entire project in a single display.
+ *
+ * @author Dale Anson, 3 Nov 2008
+ */
+
+import projectviewer.*;
+import projectviewer.vpt.*;
+import tasklist.*;
+import javax.swing.tree.*;
+
+void projectTaskList() {
+    // make sure that ProjectViewer is present
+    EditPlugin pv = jEdit.getPlugin( "projectviewer.ProjectPlugin", false );
+    if ( pv == null )
+        return ;
+
+    // make sure that TaskList is present
+    EditPlugin tl = jEdit.getPlugin( "tasklist.TaskListPlugin", false );
+    if ( tl == null )
+        return ;
+
+    SwingUtilities.invokeLater( new Runnable() {
+                public void run() {
+                    // get the openable nodes of the project.  Need to check for
+                    // binary files since they shouldn't have any tasks in them.
+                    VPTProject project = ProjectViewer.getActiveProject( view );
+                    String path = project.getRootPath();
+                    DefaultMutableTreeNode root = new DefaultMutableTreeNode( project.getName() );
+                    Collection nodes = project.getOpenableNodes();
+
+                    // check each openable node for tasks
+                    Iterator it = nodes.iterator();
+                    for ( Iterator it = nodes.iterator(); it.hasNext(); ) {
+                        VPTNode node = ( VPTNode ) it.next();
+                        if ( node.isFile() ) {
+                            VPTFile file_node = ( VPTFile ) node;
+                            File file = new File( file_node.getFile().getPath() );
+                            String filename = file.getName();
+
+                            // added this check for binary files just to speed things up.
+                            // Initially, I'm just checking filename extension for standard
+                            // image filename extensions, plus .class and .jar files.  There
+                            // could be others.
+                            if ( isBinary( filename ) ) {
+                                continue;
+                            }
+
+                            // the buffer could already be open in jEdit.  If so, don't
+                            // close it below.
+                            Buffer buffer = jEdit.getBuffer( file.getAbsolutePath() );
+                            boolean can_close = false;
+                            if ( buffer == null ) {
+                                // file is not open, so open it.  Note that openFile is necessary,
+                                // just doing jEdit.openTemporary won't actually set the mode on the
+                                // buffer, which would cause TaskList to fail since it uses mode.
+                                buffer = jEdit.openFile( view, file.getAbsolutePath() );
+
+                                // files open this way can be closed when TaskList parsing is complete.
+                                can_close = true;
+                            }
+                            try {
+                                // pass the buffer to TaskList for parsing, add tree nodes for each buffer
+                                // and child nodes for each task found.  Use "parseBuffer" rather than
+                                // "extractTasks" since extractTasks just calls parseBuffer in a swing
+                                // thread, and I'm already in a swing thread.
+                                TaskListPlugin.parseBuffer( buffer );
+                                Hashtable tasks = TaskListPlugin.requestTasksForBuffer( buffer );
+                                if ( tasks != null && tasks.size() > 0 ) {
+                                    DefaultMutableTreeNode buffer_node = new DefaultMutableTreeNode( file.getName() + "(" + file.getParent() + ")" );
+                                    root.add( buffer_node );
+                                    // the "tasks" hashtable has the line number as the key, so putting
+                                    // "tasks" into a TreeMap sorts by line number
+                                    TreeMap sorted_tasks = new TreeMap(tasks);
+                                    for ( Iterator tli = sorted_tasks.values().iterator(); tli.hasNext(); ) {
+                                        Task task = ( Task ) tli.next();
+                                        DefaultMutableTreeNode task_node = new DefaultMutableTreeNode( task );
+                                        buffer_node.add( task_node );
+                                    }
+                                }
+                            }
+                            catch ( Exception e ) {
+                                // ignored
+                            }
+
+                            // close the buffer if it wasn't already open
+                            if ( can_close ) {
+                                jEdit.closeBuffer( view, buffer );
+                            }
+                        }
+                    }
+
+                    // build the display
+                    if ( root.getChildCount() > 0 ) {
+                        JTree tree = new JTree( root );
+                        for ( int i = tree.getRowCount(); i > 0; i-- ) {
+                            tree.expandRow( i );
+                        }
+                        tree.addMouseListener( new TreeMouseListener( tree ) );
+                        JFrame frame = new JFrame( "Tasks for " + project.getName() );
+                        frame.setContentPane( new JScrollPane( tree ) );
+                        frame.pack();
+                        frame.setSize( 600, 400 );
+                        frame.setVisible( true );
+                    }
+                    else {
+                        Macros.message( view, "No tasks found for project " + project.getName() );
+                    }
+                }
+            }
+                              );
+}
+
+// Helper method to determine binary filenames.
+boolean isBinary( String filename ) {
+    String[] exts = new String[] {".jpg", ".gif", ".png", ".ico", ".bmp", ".class", ".jar", ".war"};
+    for ( String ext : exts ) {
+        if ( filename.endsWith( ext ) ) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// mouse listener for the tree so clicking on a tree node shows the corresponding
+// line in the edit pane
+class TreeMouseListener extends MouseAdapter {
+    JTree tree = null;
+    public TreeMouseListener( JTree tree ) {
+        this.tree = tree;
+    }
+    public void mouseReleased( MouseEvent me ) {
+        handleClick( me );
+    }
+
+    public void mousePressed( MouseEvent me ) {
+        handleClick( me );
+    }
+
+    private void handleClick( MouseEvent e ) {
+        TreePath path = tree.getClosestPathForLocation( e.getX(), e.getY() );
+        Task task = null;
+        if ( path.getPathCount() > 2 ) {
+            task = ( Task ) ( ( DefaultMutableTreeNode ) path.getLastPathComponent() ).getUserObject();
+            Buffer buffer = task.getBuffer();
+            int line_number = task.getLineNumber();
+            int start_offset = task.getStartOffset();
+            jEdit.openFile( view, buffer.getPath() );
+            EditPane edit_pane = view.showBuffer( buffer );
+            edit_pane.getTextArea().scrollTo( line_number, start_offset, true );
+            edit_pane.getTextArea().setCaretPosition( task.getStartPosition().getOffset() );
+        }
+    }
+}
+
+projectTaskList();

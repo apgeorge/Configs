@@ -1,0 +1,163 @@
+/*
+ * Go_to_Ruby_method.bsh v0.5
+ *
+ * Copyright 2004 Robert McKinnon
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+
+/*
+ * Place in directory: [user_home_dir]/.jedit/macros/Ruby
+ *
+ * Run from menu Macros -> Ruby
+ *
+ * Add key shortcut via Utilities -> Global Options -> Shortcuts -> Macros
+ */
+
+import gnu.regexp.RE;
+import javax.swing.JMenuItem;
+
+getMatches(expression, text) {
+    re = new RE(expression, 0, RESearchMatcher.RE_SYNTAX_JEDIT);
+    return re.getAllMatches(text);
+}
+
+getMatchList(pattern, text) {
+    matches = getMatches(pattern, text);
+    matchList = new ArrayList();
+    
+    for(i = 0; i < matches.length; i++) {
+        openingText = matches[i].toString(1).trim();
+        isClass = openingText.length() == 0;
+        
+        if(isClass) {
+            matchList.add(matches[i]);
+        }
+    }
+
+    return matchList;
+}
+
+getClassMatchList(text) {
+    return getMatchList("(.*)(class[ ]+)(\\w+.*)", text);
+}
+
+getMethodMatchList(text) {
+    return getMatchList("(.*)(def[ ]+)(\\w+.*)", text);
+}
+
+createMenuItem(method, index, view, textArea) {
+    item = new JMenuItem(method);
+    item.addActionListener(new AbstractAction() {
+        public void actionPerformed(ActionEvent e) {
+            view.goToBuffer(view.getBuffer());
+            textArea.setCaretPosition(index);
+        }
+    });
+    return item;
+}
+
+sortMenuItems(items) {
+    Collections.sort(items, new Comparator() {
+        public int compare(JMenuItem anItem, JMenuItem otherItem) {
+            return anItem.getText().compareTo(otherItem.getText());
+        }
+    });
+}
+    
+createMenuItems(prefix, indexAdjustment, matchList, matchIndex, view, textArea) {
+    items = new ArrayList();
+    matches = matchList.iterator();
+    
+    while(matches.hasNext()) {
+        match = matches.next();
+        text = prefix + match.toString(matchIndex);
+        index = indexAdjustment + match.getStartIndex(matchIndex);
+        item = createMenuItem(text, index, view, textArea);
+        items.add(item);
+    }
+    
+    sortMenuItems(items);
+    return items;
+}
+
+addClassMenuItems(classMatch, end, view, textArea, menuItems, useSubmenus) {
+    className = classMatch.toString(3);
+    start = classMatch.getStartIndex(3);
+    text = textArea.getText(start, end - start);
+    methodMatchList = getMethodMatchList(text);
+    
+    classMenuItem = createMenuItem(className, start, view, textArea);
+    methodMenuItems = createMenuItems("    ", start, methodMatchList, 3, view, textArea);
+
+    if(useSubmenus) {
+        menu = new JMenu(className);
+        menu.add(classMenuItem);
+        for(it = methodMenuItems.iterator(); it.hasNext(); menu.add(it.next()));
+        menuItems.add(menu);
+    } else {
+        menuItems.add(classMenuItem);
+        menuItems.addAll(methodMenuItems);
+    }
+}
+
+showPopup(view, textArea) {
+    text = textArea.getText();
+    matchList = getClassMatchList(text);
+    
+    useSubmenus = matchList.size() > 1;
+    matches = matchList.iterator();
+
+    menuItems = new ArrayList();
+    if(!matches.hasNext()) {
+        matches = getMethodMatchList(text);
+        menuItems.addAll(createMenuItems("", 0, matches, 3, view, textArea));
+    } else {
+        classMatch = matches.next();
+        while(matches.hasNext()) {
+            nextClassMatch = matches.next();
+            end = nextClassMatch.getStartIndex(3);
+            
+            addClassMenuItems(classMatch, end, view, textArea, menuItems, useSubmenus);
+            classMatch = nextClassMatch;
+        }
+
+        addClassMenuItems(classMatch, text.length(), view, textArea, menuItems, useSubmenus);
+        
+        if(useSubmenus) {
+            sortMenuItems(menuItems);
+        }
+    }
+
+    if(menuItems.size() > 0) {
+        menu = new JPopupMenu();
+        for(it = menuItems.iterator(); it.hasNext(); menu.add(it.next()));
+    
+        divisor = useSubmenus ? 5 : 3;
+        GUIUtilities.showPopupMenu(menu, textArea, textArea.getSize().width / divisor, textArea.getSize().height / 5);
+        if(OperatingSystem.isWindows()) {
+            menu.requestFocus();
+        }
+    }
+}
+
+
+try {
+    view.showWaitCursor();
+    showPopup(view, textArea);
+} finally {
+    view.hideWaitCursor();
+}
+

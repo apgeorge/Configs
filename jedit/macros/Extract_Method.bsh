@@ -1,0 +1,39 @@
+params = Macros.input(view,"Specify Method Name");
+// params = "new";
+if (params == null) return;
+method_name = params;
+
+body = textArea.getSelectedText();
+if (body == null) return;
+
+textArea.setSelectedText(method_name);
+
+sidekick.SideKickActions.selectAsset(view);
+
+//clear selection
+textArea.goToNextLine(false);
+textArea.goToPrevLine(false);
+
+textArea.insertEnterAndIndent();
+textArea.insertEnterAndIndent();
+textArea.insertEnterAndIndent();
+textArea.goToPrevLine(false);
+
+textArea.setSelectedText("def");
+SuperAbbrevsPlugin.tab(view, textArea, buffer);
+textArea.setSelectedText(method_name);
+SuperAbbrevsPlugin.tab(view, textArea, buffer);
+
+lines = body.trim().split("\n");
+
+// textArea.setSelectedText(body);
+for(i = 0; i < lines.length; ++i)
+{
+    line = lines[i].trim();
+    textArea.setSelectedText(line);
+    textArea.insertEnterAndIndent();    
+}
+
+buffer.save(view,null,true);
+
+

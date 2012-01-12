@@ -1,0 +1,64 @@
+/*
+ * Select_Between_Quotes.bsh - Beanshell macro to simply select all the text
+ * between two quotes (").
+ *
+ * Copyright (C) 2002 Lee Turner (lee@leeturner.org)
+ * Version 1.0
+ *
+ * :tabSize=4:indentSize=4:noTabs=false:
+ * :folding=explicit:collapseFolds=1:
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
+// find starting point i.e where the cursor is.
+int currentPosition = textArea.getCaretPosition();
+int startPosition = 0;
+
+// keep going back until we find a quote
+do
+{
+	textArea.goToPrevCharacter(false);
+}
+while((textArea.getCaretPosition() != 0) && !(textArea.getText(textArea.getCaretPosition(), 1).equals("\"")));
+
+// if no quote found, move caret back and forget it
+if(textArea.getCaretPosition() == 0)
+{
+	textArea.moveCaretPosition(currentPosition);
+}
+else
+{
+	startPosition = textArea.getCaretPosition() + 1;
+
+	// now move forwards to see if we can find a quote.
+	do
+	{
+		textArea.goToNextCharacter(false);
+	}
+	while((textArea.getCaretPosition() != buffer.getLength()) &&!(textArea.getText(textArea.getCaretPosition(), 1).equals("\"")));
+
+	// no forward matching quote.
+	if(textArea.getCaretPosition() == buffer.getLength())
+	{
+		textArea.moveCaretPosition(currentPosition);
+	}
+	else
+	{
+		textArea.setSelection(new Selection.Range(startPosition, textArea.getCaretPosition()));
+	}
+
+	textArea.moveCaretPosition(currentPosition);
+}
+
